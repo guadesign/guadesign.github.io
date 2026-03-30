@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guada Eguiazabal — Diseñadora Multimedial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --yellow: #F5C842;
+      --orange: #E8651A;
+      --pink: #E87D9B;
+      --green: #3D8A4E;
+      --blue: #2D5FA6;
+      --cream: #F5EDD8;
+      --dark: #1A1410;
+      --white: #FDFAF3;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--dark);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    /* Custom cursor */
+    .cursor {
+      width: 20px; height: 20px;
+      background: var(--orange);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s, width 0.2s, height 0.2s, background 0.2s;
+      mix-blend-mode: multiply;
+    }
+    .cursor.big {
+      width: 60px; height: 60px;
+      background: var(--yellow);
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 3rem;
+      background: var(--white);
+      border-bottom: 2px solid var(--dark);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--orange); }
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      padding: 8rem 3rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-shapes {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .shape {
+      position: absolute;
+      opacity: 0.15;
+    }
+
+    .shape-star {
+      width: 180px; height: 180px;
+      top: 10%; right: 8%;
+      animation: spin 20s linear infinite;
+    }
+    .shape-circle {
+      width: 120px; height: 120px;
+      bottom: 20%; left: 5%;
+      border-radius: 50%;
+      background: var(--pink);
+      animation: float 6s ease-in-out infinite;
+    }
+    .shape-blob {
+      width: 200px; height: 200px;
+      bottom: 10%; right: 15%;
+      background: var(--blue);
+      border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+      animation: morph 8s ease-in-out infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    @keyframes morph {
+      0%, 100% { border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%; }
+      50% { border-radius: 30% 70% 40% 60% / 60% 40% 70% 30%; }
+    }
+
+    .hero-left { position: relative; z-index: 1; }
+
+    .hero-tag {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--dark);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+      border: 2px solid var(--dark);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.5rem, 6vw, 6rem);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 span { color: var(--orange); font-style: italic; }
+
+    .hero-frase {
+      font-size: 1.25rem;
+      font-weight: 300;
+      line-height: 1.5;
+      max-width: 400px;
+      margin-bottom: 2.5rem;
+      color: #444;
+    }
+
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      border: 2px solid var(--dark);
+      transition: all 0.2s;
+      cursor: none;
+    }
+    .btn-primary { background: var(--dark); color: var(--white); }
+    .btn-primary:hover { background: var(--orange); border-color: var(--orange); }
+    .btn-secondary { background: transparent; color: var(--dark); }
+    .btn-secondary:hover { background: var(--yellow); }
+
+    /* Hero right — formas decorativas grandes */
+    .hero-right {
+      position: relative; z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .color-block {
+      border-radius: 20px;
+      border: 2px solid var(--dark);
+      aspect-ratio: 1;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      overflow: hidden;
+    }
+
+    .cb1 { background: var(--yellow); }
+    .cb2 { background: var(--pink); }
+    .cb3 { background: var(--blue); color: var(--white); }
+    .cb4 { background: var(--green); color: var(--white); }
+
+    .cb-svg { width: 70%; height: 70%; }
+
+    /* SOBRE MI */
+    #sobre {
+      background: var(--dark);
+      color: var(--white);
+      padding: 6rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.5;
+      margin-bottom: 1rem;
+    }
+
+    #sobre h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    #sobre h2 em { color: var(--yellow); font-style: italic; }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .sobre-bio {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #ccc;
+      max-width: 480px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .skill-chip {
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
+      border: 1.5px solid rgba(255,255,255,0.15);
+      font-size: 0.85rem;
+      font-weight: 400;
+      transition: all 0.2s;
+    }
+    .skill-chip:hover { border-color: var(--yellow); color: var(--yellow); }
+
+    /* PROYECTOS BEHANCE */
+    #proyectos {
+      padding: 6rem 3rem;
+      background: var(--cream);
+    }
+
+    #proyectos h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      font-weight: 900;
+      margin-bottom: 3rem;
+      border-bottom: 3px solid var(--dark);
+      padding-bottom: 1rem;
+    }
+
+    .proyectos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .proyecto-card {
+      border: 2px solid var(--dark);
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--white);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      color: var(--dark);
+      display: block;
+    }
+    .proyecto-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 8px 8px 0 var(--dark);
+    }
+
+    .proyecto-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      border-bottom: 2px solid var(--dark);
+    }
+
+    .proyecto-info { padding: 1.5rem; }
+    .proyecto-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.5;
+      margin-bottom: 0.4rem;
+    }
+    .proyecto-titulo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .proyecto-desc {
+      font-size: 0.85rem;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* EXPERIENCIA + INSTAGRAM EMBEDS */
+    #experiencia {
+      padding: 6rem 3rem;
+      background: var(--white);
+    }
+
+    #experiencia h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      font-weight: 900;
+      margin-bottom: 3rem;
+    }
+
+    .empresa-block {
+      margin-bottom: 5rem;
+      border-left: 4px solid var(--yellow);
+      padding-left: 2rem;
+    }
+
+    .empresa-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .empresa-nombre {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+    }
+
+    .empresa-periodo {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+
+    .empresa-rol {
+      font-size: 0.95rem;
+      color: var(--orange);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .empresa-desc {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #555;
+      max-width: 600px;
+      margin-bottom: 1.5rem;
+    }
+
+    .posts-scroll {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      scrollbar-width: thin;
+      scrollbar-color: var(--yellow) transparent;
+    }
+
+    .posts-scroll::-webkit-scrollbar { height: 4px; }
+    .posts-scroll::-webkit-scrollbar-track { background: transparent; }
+    .posts-scroll::-webkit-scrollbar-thumb { background: var(--yellow); border-radius: 999px; }
+
+    .post-embed-wrapper {
+      flex: 0 0 auto;
+      width: 280px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid var(--dark);
+      background: #fafafa;
+    }
+
+    .post-embed-wrapper iframe,
+    .post-embed-wrapper blockquote {
+      width: 100% !important;
+      min-width: unset !important;
+    }
+
+    /* CONTACTO */
+    #contacto {
+      background: var(--orange);
+      color: var(--white);
+      padding: 6rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #contacto h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6vw, 6rem);
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    #contacto h2 em { font-style: italic; color: var(--yellow); }
+
+    #contacto p {
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+      opacity: 0.9;
+    }
+
+    .contacto-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--dark);
+      border-color: var(--white);
+    }
+    .btn-white:hover { background: var(--yellow); border-color: var(--yellow); }
+
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      border-color: var(--white);
+    }
+    .btn-outline-white:hover { background: rgba(255,255,255,0.15); }
+
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* FADE IN */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { gap: 1rem; }
+      #hero { grid-template-columns: 1fr; padding: 6rem 1.5rem 3rem; }
+      .hero-right { display: none; }
+      .sobre-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .proyectos-grid { grid-template-columns: 1fr; }
+      #proyectos, #experiencia, #sobre, #contacto { padding: 4rem 1.5rem; }
+      .empresa-block { padding-left: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Guada Eguiazabal</div>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre mí</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#experiencia">Experiencia</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-shapes">
+    <svg class="shape shape-star" viewBox="0 0 100 100" fill="var(--yellow)">
+      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35"/>
+    </svg>
+    <div class="shape shape-circle"></div>
+    <div class="shape shape-blob"></div>
+  </div>
+
+  <div class="hero-left fade-in">
+    <div class="hero-tag">✦ Disponible para freelance & full time</div>
+    <h1>Guada<br><span>Eguiazabal</span></h1>
+    <p class="hero-frase">Diseño que se ve bien<br>y funciona mejor.</p>
+    <div class="hero-btns">
+      <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+      <a href="#contacto" class="btn btn-secondary">Hablemos</a>
+    </div>
+  </div>
+
+  <div class="hero-right fade-in">
+    <div class="color-block cb1">
+      <svg class="cb-svg" viewBox="0 0 100 100">
+        <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="#1A1410"/>
+      </svg>
+    </div>
+    <div class="color-block cb2">
+      <svg class="cb-svg" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" fill="none" stroke="#1A1410" stroke-width="8"/>
+        <circle cx="50" cy="50" r="20" fill="#1A1410"/>
+      </svg>
+    </div>
+    <div class="color-block cb3">
+      <svg class="cb-svg" viewBox="0 0 100 100">
+        <rect x="10" y="10" width="35" height="35" rx="8" fill="white"/>
+        <rect x="55" y="10" width="35" height="35" rx="8" fill="white" opacity="0.5"/>
+        <rect x="10" y="55" width="35" height="35" rx="8" fill="white" opacity="0.5"/>
+        <rect x="55" y="55" width="35" height="35" rx="8" fill="white"/>
+      </svg>
+    </div>
+    <div class="color-block cb4">
+      <svg class="cb-svg" viewBox="0 0 100 100">
+        <ellipse cx="50" cy="50" rx="40" ry="25" fill="none" stroke="white" stroke-width="8"/>
+        <ellipse cx="50" cy="50" rx="40" ry="25" fill="none" stroke="white" stroke-width="8" transform="rotate(60 50 50)"/>
+        <ellipse cx="50" cy="50" rx="40" ry="25" fill="none" stroke="white" stroke-width="8" transform="rotate(120 50 50)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MI -->
+<section id="sobre">
+  <div class="section-label">01 — Sobre mí</div>
+  <h2>Diseñadora <em>multimedial</em><br>con criterio estético.</h2>
+  <div class="sobre-grid fade-in">
+    <p class="sobre-bio">
+      Soy Guada, licenciada en Diseño Multimedial (UNSTA, Tucumán). Con más de 3 años de experiencia en identidad visual, motion design y contenido para redes sociales, trabajé en contextos de agencia, empresa y freelance gestionando múltiples marcas en simultáneo. Domino la suite Adobe y tengo criterio estético, atención al detalle y capacidad para adaptarme a distintos lenguajes de marca.
+    </p>
+    <div class="skills-grid">
+      <div class="skill-chip">Identidad visual</div>
+      <div class="skill-chip">Motion graphics</div>
+      <div class="skill-chip">Diseño editorial</div>
+      <div class="skill-chip">Redes sociales</div>
+      <div class="skill-chip">After Effects</div>
+      <div class="skill-chip">Photoshop</div>
+      <div class="skill-chip">Illustrator</div>
+      <div class="skill-chip">Figma</div>
+      <div class="skill-chip">Premiere Pro</div>
+      <div class="skill-chip">InDesign</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos">
+  <div class="section-label">02 — Proyectos</div>
+  <h2>Trabajo selecto</h2>
+  <div class="proyectos-grid">
+
+    <a class="proyecto-card fade-in" href="https://www.behance.net/gallery/220524725/Warner-Music-Group-Broadcast-Pack" target="_blank">
+      <div class="proyecto-thumb" style="background: #1a1410;">
+        <svg width="80" height="80" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#F5C842" stroke-width="3"/>
+          <circle cx="50" cy="50" r="30" fill="none" stroke="#E8651A" stroke-width="3"/>
+          <circle cx="50" cy="50" r="15" fill="#F5C842"/>
+        </svg>
+      </div>
+      <div class="proyecto-info">
+        <div class="proyecto-tag">Motion · Broadcast</div>
+        <div class="proyecto-titulo">Warner Music Group Broadcast Pack</div>
+        <div class="proyecto-desc">Sistema de animaciones y piezas gráficas para broadcasting de una de las majors más importantes de la industria musical.</div>
+      </div>
+    </a>
+
+    <a class="proyecto-card fade-in" href="https://www.behance.net/itsmeguadi" target="_blank">
+      <div class="proyecto-thumb" style="background: #F5EDD8;">
+        <svg width="80" height="80" viewBox="0 0 100 100">
+          <rect x="20" y="15" width="60" height="70" rx="4" fill="none" stroke="#1A1410" stroke-width="3"/>
+          <line x1="30" y1="35" x2="70" y2="35" stroke="#E8651A" stroke-width="3"/>
+          <line x1="30" y1="50" x2="70" y2="50" stroke="#1A1410" stroke-width="2"/>
+          <line x1="30" y1="62" x2="55" y2="62" stroke="#1A1410" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="proyecto-info">
+        <div class="proyecto-tag">Diseño gráfico · Swiss Design</div>
+        <div class="proyecto-titulo">Emerge — Poster suizo</div>
+        <div class="proyecto-desc">Pieza editorial de diseño suizo. El proyecto más visto en Behance. Composición tipográfica con rigor geométrico y fuerza visual.</div>
+      </div>
+    </a>
+
+    <a class="proyecto-card fade-in" href="https://www.behance.net/itsmeguadi" target="_blank">
+      <div class="proyecto-thumb" style="background: #0d1b2e;">
+        <svg width="80" height="80" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="20" fill="#2D5FA6"/>
+          <ellipse cx="50" cy="50" rx="40" ry="12" fill="none" stroke="white" stroke-width="2" transform="rotate(25 50 50)"/>
+          <circle cx="82" cy="38" r="5" fill="#F5C842"/>
+        </svg>
+      </div>
+      <div class="proyecto-info">
+        <div class="proyecto-tag">FUI · Motion · UI Design</div>
+        <div class="proyecto-titulo">Mission to the Moon — FUI</div>
+        <div class="proyecto-desc">Interfaz de usuario ficticia (Fictional User Interface) con estética espacial. Sistema gráfico de instrumentación interactiva.</div>
+      </div>
+    </a>
+
+    <a class="proyecto-card fade-in" href="https://www.behance.net/itsmeguadi" target="_blank">
+      <div class="proyecto-thumb" style="background: #E8651A;">
+        <svg width="80" height="80" viewBox="0 0 100 100">
+          <polygon points="50,10 90,80 10,80" fill="none" stroke="white" stroke-width="4"/>
+          <polygon points="50,30 75,75 25,75" fill="white" opacity="0.3"/>
+        </svg>
+      </div>
+      <div class="proyecto-info">
+        <div class="proyecto-tag">Identidad visual · Branding</div>
+        <div class="proyecto-titulo">Grupo Flash — Logo & Marca</div>
+        <div class="proyecto-desc">Desarrollo de identidad corporativa completa para grupo logístico: diseño de logo, papelería y sistema de señalética.</div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- EXPERIENCIA -->
+<section id="experiencia">
+  <div class="section-label">03 — Experiencia</div>
+  <h2>Dónde estuve<br>y qué hice.</h2>
+
+  <!-- PROWORK -->
+  <div class="empresa-block fade-in">
+    <div class="empresa-header">
+      <div class="empresa-nombre">Grupo Prowork</div>
+      <div class="empresa-periodo">Sept 2023 — Presente</div>
+    </div>
+    <div class="empresa-rol">Diseñadora Gráfica</div>
+    <p class="empresa-desc">
+      Diseño de contenido visual para redes sociales de una empresa de merchandising promocional. Producción regular de piezas para campañas estacionales, motion graphics y catálogos de producto. Adaptación de formatos visuales para distintas plataformas.
+    </p>
+    <div class="posts-scroll">
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/prowork.merchandising/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRUPO FLASH - MIS ENVIOS -->
+  <div class="empresa-block fade-in">
+    <div class="empresa-header">
+      <div class="empresa-nombre">Grupo Flash</div>
+      <div class="empresa-periodo">Sept 2024 — Jul 2025</div>
+    </div>
+    <div class="empresa-rol">Diseñadora Gráfica — Mis Envíos / Logísticas Especiales / Flash</div>
+    <p class="empresa-desc">
+      Responsable del diseño visual para tres marcas del grupo logístico. Identidad corporativa desde cero, diseño de logo, papelería y señalética. Producción de contenido para redes sociales en colaboración con el equipo de CM y marketing.
+    </p>
+    <div class="posts-scroll" id="posts-flash">
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLFm_P3ur2y/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/misenvios/p/DLm20PttFLU/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/misenvios/p/DKudWIxMcw-/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLDIRZyueSs/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DIy7yJiuhGk/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLnEqqZsDH1/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKUkQe1xu4t/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DFu2dTDRFkE/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKrvZQpOod5/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DIRgrwrsLdJ/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DGn47RzRePs/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNSTA -->
+  <div class="empresa-block fade-in">
+    <div class="empresa-header">
+      <div class="empresa-nombre">UNSTA — Servicios CEO</div>
+      <div class="empresa-periodo">Jun 2022 — Oct 2023</div>
+    </div>
+    <div class="empresa-rol">Diseñadora Gráfica</div>
+    <p class="empresa-desc">
+      Producción de contenido multimedia para comunicación institucional universitaria: campañas de admisión, spots, GIFs y videos. Diseño gráfico para comunicación interna y externa con entrega en múltiples formatos y plataformas.
+    </p>
+    <div class="posts-scroll">
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/universidadunsta/reel/CxcDi4SO_GR/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/universidadunsta/p/CxcDSz-OS_W/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/universidadunsta/p/CxYAFJludFk/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/universidadunsta/reel/CpDnu9lp3dJ/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+      <div class="post-embed-wrapper">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/universidadunsta/reel/CiKsG7KPoFW/" data-instgrm-version="14" style="width:100%;"></blockquote>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <h2>¿Trabajamos<br><em>juntos?</em></h2>
+  <p>Estoy disponible para proyectos freelance y oportunidades full time.</p>
+  <div class="contacto-links">
+    <a href="mailto:mguadalupeeguiazabal@gmail.com" class="btn btn-white">mguadalupeeguiazabal@gmail.com</a>
+    <a href="https://www.behance.net/itsmeguadi" target="_blank" class="btn btn-outline-white">Behance</a>
+    <a href="https://www.linkedin.com/in/guadalupe-eguiazabal" target="_blank" class="btn btn-outline-white">LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Guada Eguiazabal — Diseñadora Multimedial, Tucumán, Argentina
+</footer>
+
+<!-- Instagram embed script -->
+<script async src="//www.instagram.com/embed.js"></script>
+
+<script>
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('big'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
+  });
+
+  // Fade in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
