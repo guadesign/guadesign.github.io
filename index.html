@@ -53,25 +53,29 @@
       position: fixed; top: 0; left: 0; right: 0;
       z-index: 100;
       display: flex; justify-content: space-between; align-items: center;
-      padding: 1.2rem 3rem;
+      padding: 1rem 2rem;
       background: var(--white);
       border-bottom: 2px solid var(--dark);
+      gap: 1rem;
     }
     .nav-logo {
       font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       font-weight: 900;
       letter-spacing: -0.02em;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links { display: flex; gap: 1.2rem; list-style: none; }
     .nav-links a {
       text-decoration: none;
       color: var(--dark);
-      font-size: 0.85rem;
+      font-size: 0.78rem;
       font-weight: 500;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       transition: color 0.2s;
+      white-space: nowrap;
     }
     .nav-links a:hover { color: var(--orange); }
 
@@ -233,7 +237,7 @@
       font-size: clamp(2.5rem, 4vw, 4rem);
       font-weight: 900;
       line-height: 1.1;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
       max-width: 600px;
     }
 
@@ -246,17 +250,66 @@
       align-items: start;
     }
 
-    .sobre-bio {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: #ccc;
-      max-width: 480px;
+    .sobre-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
     }
+    .sobre-titulo-col h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.1;
+    }
+    .sobre-titulo-col h2 em { color: var(--yellow); font-style: italic; }
+    .sobre-contenido-col { display: flex; flex-direction: column; gap: 2rem; }
+
+    /* CARRUSEL */
+    .carrusel-wrapper { position: relative; }
+    .carrusel {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 0.5rem;
+    }
+    .carrusel::-webkit-scrollbar { display: none; }
+    .carrusel-item {
+      flex: 0 0 calc(25% - 0.75rem);
+      min-width: 240px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid var(--dark);
+      background: #fafafa;
+    }
+    .carrusel-item blockquote { margin: 0 !important; width: 100% !important; min-width: unset !important; }
+    .carrusel-btn {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--dark);
+      color: var(--white);
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      z-index: 10;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .carrusel-btn:hover { background: var(--orange); }
+    .carrusel-btn.prev { left: -20px; }
+    .carrusel-btn.next { right: -20px; }
 
     .skills-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
+      align-content: start;
     }
 
     .skill-chip {
@@ -486,16 +539,22 @@
     }
 
     @media (max-width: 768px) {
-      nav { padding: 1rem 1.5rem; }
-      .nav-links { gap: 1rem; }
-      #hero { grid-template-columns: 1fr; padding: 6rem 1.5rem 3rem; }
+      nav { padding: 0.8rem 1rem; }
+      .nav-logo { font-size: 0.9rem; }
+      .nav-links { gap: 0.7rem; }
+      .nav-links a { font-size: 0.65rem; }
+      #hero { grid-template-columns: 1fr; padding: 5rem 1.5rem 3rem; }
       .hero-right { display: none; }
-      .sobre-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .sobre-layout { grid-template-columns: 1fr; gap: 2rem; }
+      .sobre-contenido-col { gap: 1.5rem; }
       .proyectos-grid { grid-template-columns: 1fr; }
       #proyectos, #experiencia, #sobre, #contacto { padding: 4rem 1.5rem; }
       .empresa-block { padding-left: 1rem; }
+      .carrusel-item { flex: 0 0 85vw; min-width: unset; }
+      .carrusel-btn { display: none; }
     }
-  </style>
+
+</style>
 </head>
 <body>
 
@@ -565,22 +624,26 @@
 <!-- SOBRE MI -->
 <section id="sobre">
   <div class="section-label">01 — Sobre mí</div>
-  <h2>Diseñadora <em>multimedial</em><br>con criterio estético.</h2>
-  <div class="sobre-grid fade-in">
-    <p class="sobre-bio">
-      Soy Guada, licenciada en Diseño Multimedial (UNSTA, Tucumán). Con más de 3 años de experiencia en identidad visual, motion design y contenido para redes sociales, trabajé en contextos de agencia, empresa y freelance gestionando múltiples marcas en simultáneo. Domino la suite Adobe y tengo criterio estético, atención al detalle y capacidad para adaptarme a distintos lenguajes de marca.
-    </p>
-    <div class="skills-grid">
-      <div class="skill-chip">Identidad visual</div>
-      <div class="skill-chip">Motion graphics</div>
-      <div class="skill-chip">Diseño editorial</div>
-      <div class="skill-chip">Redes sociales</div>
-      <div class="skill-chip">After Effects</div>
-      <div class="skill-chip">Photoshop</div>
-      <div class="skill-chip">Illustrator</div>
-      <div class="skill-chip">Figma</div>
-      <div class="skill-chip">Premiere Pro</div>
-      <div class="skill-chip">InDesign</div>
+  <div class="sobre-layout">
+    <div class="sobre-titulo-col">
+      <h2>Diseñadora <em>multimedial</em><br>con criterio estético.</h2>
+    </div>
+    <div class="sobre-contenido-col fade-in">
+      <p class="sobre-bio">
+        Soy Guada, licenciada en Diseño Multimedial (UNSTA, Tucumán). Con más de 3 años de experiencia en identidad visual, motion design y contenido para redes sociales, trabajé en contextos de agencia, empresa y freelance gestionando múltiples marcas en simultáneo. Domino la suite Adobe y tengo criterio estético, atención al detalle y capacidad para adaptarme a distintos lenguajes de marca.
+      </p>
+      <div class="skills-grid">
+        <div class="skill-chip">Identidad visual</div>
+        <div class="skill-chip">Motion graphics</div>
+        <div class="skill-chip">Diseño editorial</div>
+        <div class="skill-chip">Redes sociales</div>
+        <div class="skill-chip">After Effects</div>
+        <div class="skill-chip">Photoshop</div>
+        <div class="skill-chip">Illustrator</div>
+        <div class="skill-chip">Figma</div>
+        <div class="skill-chip">Premiere Pro</div>
+        <div class="skill-chip">InDesign</div>
+      </div>
     </div>
   </div>
 </section>
@@ -670,19 +733,23 @@
     <p class="empresa-desc">
       Diseño de contenido visual para redes sociales de una empresa de merchandising promocional. Producción regular de piezas para campañas estacionales, motion graphics y catálogos de producto.
     </p>
-    <div class="proyectos-grid">
-      <div class="proyecto-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKrvZQpOod5/" data-instgrm-version="14" style="width:100%; margin:0;"></blockquote>
+    <div class="carrusel-wrapper">
+      <button class="carrusel-btn prev" onclick="mover(this, -1)">&#8592;</button>
+      <div class="carrusel">
+        <div class="carrusel-item">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/prowork.merchandising/p/DRmd0p4CNnH/" data-instgrm-version="14" style="width:100%;margin:0;"></blockquote>
+        </div>
+        <div class="carrusel-item">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DTsQUCnAXC8/" data-instgrm-version="14" style="width:100%;margin:0;"></blockquote>
+        </div>
+        <div class="carrusel-item">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DV_Bm9ej54s/" data-instgrm-version="14" style="width:100%;margin:0;"></blockquote>
+        </div>
+        <div class="carrusel-item">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/prowork.merchandising/reel/DPW5p3fCcaj/" data-instgrm-version="14" style="width:100%;margin:0;"></blockquote>
+        </div>
       </div>
-      <div class="proyecto-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DIRgrwrsLdJ/" data-instgrm-version="14" style="width:100%; margin:0;"></blockquote>
-      </div>
-      <div class="proyecto-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DGn47RzRePs/" data-instgrm-version="14" style="width:100%; margin:0;"></blockquote>
-      </div>
-      <div class="proyecto-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DE8i9Wru8ao/" data-instgrm-version="14" style="width:100%; margin:0;"></blockquote>
-      </div>
+      <button class="carrusel-btn next" onclick="mover(this, 1)">&#8594;</button>
     </div>
   </div>
 
@@ -696,19 +763,29 @@
     <p class="empresa-desc">
       Responsable del diseño visual para tres marcas del grupo logístico. Identidad corporativa desde cero, diseño de logo, papelería y señalética. Producción de contenido para redes en colaboración con el equipo de CM y marketing.
     </p>
-    <div class="proyectos-grid">
-      <div class="proyecto-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLFm_P3ur2y/" data-instgrm-version="14" style="width:100%; margin:0;"></blockquote>
+    <div class="carrusel-wrapper">
+      <button class="carrusel-btn prev" onclick="mover(this, -1)">&#8592;</button>
+      <div class="carrusel">
+        <div class="carrusel-item">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/misenvios/p/DKudWIxMcw-/" data-instgrm-version="14" style="width:100%;margin:0;"></blockquote>
+        </div>
+        <div class="carrusel-item">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/misenvios/p/DLm20PttFLU/" data-instgrm-version="14" style="width:100%;margin:0;"></blockquote>
+        </div>
+        <div class="carrusel-item">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLFm_P3ur2y/" data-instgrm-version="14" style="width:100%;margin:0;"></blockquote>
+        </div>
+        <div class="carrusel-item">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKrvZQpOod5/" data-instgrm-version="14" style="width:100%;margin:0;"></blockquote>
+        </div>
+        <div class="carrusel-item">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DFu2dTDRFkE/" data-instgrm-version="14" style="width:100%;margin:0;"></blockquote>
+        </div>
+        <div class="carrusel-item">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DIy7yJiuhGk/" data-instgrm-version="14" style="width:100%;margin:0;"></blockquote>
+        </div>
       </div>
-      <div class="proyecto-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/misenvios/p/DLm20PttFLU/" data-instgrm-version="14" style="width:100%; margin:0;"></blockquote>
-      </div>
-      <div class="proyecto-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLnEqqZsDH1/" data-instgrm-version="14" style="width:100%; margin:0;"></blockquote>
-      </div>
-      <div class="proyecto-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DFu2dTDRFkE/" data-instgrm-version="14" style="width:100%; margin:0;"></blockquote>
-      </div>
+      <button class="carrusel-btn next" onclick="mover(this, 1)">&#8594;</button>
     </div>
   </div>
 
@@ -722,19 +799,20 @@
     <p class="empresa-desc">
       Producción de contenido multimedia para comunicación institucional universitaria: campañas de admisión, spots, GIFs y videos. Diseño gráfico para comunicación interna y externa en múltiples formatos y plataformas.
     </p>
-    <div class="proyectos-grid">
-      <div class="proyecto-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/universidadunsta/reel/CxcDi4SO_GR/" data-instgrm-version="14" style="width:100%; margin:0;"></blockquote>
+    <div class="carrusel-wrapper">
+      <button class="carrusel-btn prev" onclick="mover(this, -1)">&#8592;</button>
+      <div class="carrusel">
+        <div class="carrusel-item">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cd5z-HXl-pq/" data-instgrm-version="14" style="width:100%;margin:0;"></blockquote>
+        </div>
+        <div class="carrusel-item">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CgCsOeElajD/" data-instgrm-version="14" style="width:100%;margin:0;"></blockquote>
+        </div>
+        <div class="carrusel-item">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/universidadunsta/reel/CiKsG7KPoFW/" data-instgrm-version="14" style="width:100%;margin:0;"></blockquote>
+        </div>
       </div>
-      <div class="proyecto-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/universidadunsta/p/CxYAFJludFk/" data-instgrm-version="14" style="width:100%; margin:0;"></blockquote>
-      </div>
-      <div class="proyecto-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/universidadunsta/reel/CpDnu9lp3dJ/" data-instgrm-version="14" style="width:100%; margin:0;"></blockquote>
-      </div>
-      <div class="proyecto-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/universidadunsta/reel/Cj0XMHksDdF/" data-instgrm-version="14" style="width:100%; margin:0;"></blockquote>
-      </div>
+      <button class="carrusel-btn next" onclick="mover(this, 1)">&#8594;</button>
     </div>
   </div>
 
@@ -759,6 +837,13 @@
 <script async src="//www.instagram.com/embed.js"></script>
 
 <script>
+  // Carrusel con flechas
+  function mover(btn, dir) {
+    const carrusel = btn.parentElement.querySelector('.carrusel');
+    const itemWidth = carrusel.querySelector('.carrusel-item').offsetWidth + 16;
+    carrusel.scrollBy({ left: dir * itemWidth * 2, behavior: 'smooth' });
+  }
+
   // Custom cursor
   const cursor = document.getElementById('cursor');
   document.addEventListener('mousemove', e => {
