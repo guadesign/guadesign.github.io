@@ -1,35 +1,47 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 const InstagramEmbed = ({ url }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef(null);
+
   useEffect(() => {
-    if (window.instgrm) {
-      window.instgrm.Embeds.process();
-    } else {
-      const script = document.createElement('script');
-      script.src = "//www.instagram.com/embed.js";
-      script.async = true;
-      document.body.appendChild(script);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
     }
-  }, [url]);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (isVisible && window.instgrm) {
+      window.instgrm.Embeds.process();
+    }
+  }, [isVisible, url]);
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', padding: '10px 0' }}>
-      <blockquote 
-        className="instagram-media" 
-        data-instgrm-permalink={url}
-        data-instgrm-version="14"
-        style={{ 
-          background: '#FFF', 
-          border: '0', 
-          borderRadius: '12px', 
-          boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)', 
-          margin: '1px', 
-          maxWidth: '540px', 
-          minWidth: '326px', 
-          width: 'calc(100% - 2px)' 
-        }}
-      >
-      </blockquote>
+    <div ref={containerRef} style={{ minHeight: '400px', display: 'flex', justifyContent: 'center' }}>
+      {isVisible ? (
+        <blockquote 
+          className="instagram-media" 
+          data-instgrm-permalink={url}
+          data-instgrm-version="14"
+          style={{ background: '#FFF', border: '0', borderRadius: '12px', width: '100%' }}
+        >
+          <a href={url} target="_blank" rel="noopener noreferrer">Ver trabajo en Instagram</a>
+        </blockquote>
+      ) : (
+        <div style={{ color: '#ccc', fontSize: '0.8rem', marginTop: '20px' }}>Cargando pieza...</div>
+      )}
     </div>
   );
 };
