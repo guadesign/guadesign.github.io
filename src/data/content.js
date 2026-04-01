@@ -57,7 +57,7 @@ export const experiencia = [
     nombre: 'Grupo Flash',
     periodo: 'Sept 2024 — Jul 2025',
     rol: 'Diseñadora Gráfica — Mis Envíos · Logísticas Especiales · Flash',
-    desc: 'Responsable del diseño visual para tres marcas del grupo logístico. Identidad corporativa desde cero, diseño de logo, papelería y señalética. Producción de contenido para redes en colaboración directa con Community Manager y el equipo de marketing.',
+    desc: 'Responsable del diseño visual para tres marcas del grupo empresarial. Realicé la identidad corporativa del grupo empresarial desde cero, diseño de logo, papelería y señalética. Producción de contenido para redes en colaboración directa con Community Manager y el equipo de marketing para las tres marcas.',
     posts: [
       'https://www.instagram.com/misenvios/p/DKudWIxMcw-/',
       'https://www.instagram.com/misenvios/p/DLm20PttFLU/',
