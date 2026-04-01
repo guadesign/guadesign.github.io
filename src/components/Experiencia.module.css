@@ -1,0 +1,58 @@
+.experiencia {
+  padding: 6rem 3rem;
+  background: var(--white);
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 900;
+  margin-bottom: 3rem;
+}
+
+.block {
+  margin-bottom: 5rem;
+  border-left: 4px solid var(--yellow);
+  padding-left: 2rem;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.nombre {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.periodo {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.rol {
+  font-size: 0.95rem;
+  color: var(--orange);
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .experiencia { padding: 4rem 1.5rem; }
+  .block { padding-left: 1rem; }
+}

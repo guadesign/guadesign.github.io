@@ -1,0 +1,48 @@
+.sobre {
+  background: var(--dark);
+  color: var(--white);
+  padding: 6rem 3rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+}
+.h2 em { color: var(--yellow); font-style: italic; }
+
+.contenidoCol { display: flex; flex-direction: column; gap: 2rem; }
+
+.bio {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.chip {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.chip:hover { border-color: var(--yellow); color: var(--yellow); }
+
+@media (max-width: 768px) {
+  .sobre { padding: 4rem 1.5rem; }
+  .layout { grid-template-columns: 1fr; gap: 2rem; }
+}

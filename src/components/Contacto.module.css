@@ -1,0 +1,41 @@
+.contacto {
+  background: var(--orange);
+  color: var(--white);
+  padding: 6rem 3rem;
+  text-align: center;
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+.h2 em { font-style: italic; color: var(--yellow); }
+
+.sub {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer {
+  background: var(--dark);
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .contacto { padding: 4rem 1.5rem; }
+}
