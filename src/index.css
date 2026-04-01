@@ -7,8 +7,8 @@
   --cream: #F5EDD8;
   --dark: #1A1410;
   --white: #FDFAF3;
-  --font-display: 'Playfair Display', serif;
-  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'Roboto', sans-serif;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
