@@ -3,6 +3,20 @@ import warnerImg from '../assets/warner.png'
 import beautyouImg from '../assets/beautyou.png'
 import moonImg from '../assets/moon.png'
 
+import proworkPost1 from '../assets/pw 1.png'
+import proworkPost2 from '../assets/pw 2.png'
+import proworkPost3 from '../assets/pw 3.png'
+import proworkPost4 from '../assets/pw 4.png'
+
+import flashPost1 from '../assets/flash 1.png'
+import flashPost2 from '../assets/flash 2.png'
+import flashPost3 from '../assets/flash 3.png'
+import flashPost4 from '../assets/flash 4.png'
+import flashPost5 from '../assets/flash 5.png'
+
+import unstaPost1 from '../assets/unsta 1.png'
+import unstaPost2 from '../assets/unsta 2.png'
+
 export const proyectos = [
   {
     id: 1,
@@ -44,12 +58,12 @@ export const experiencia = [
     nombre: 'Grupo Prowork',
     periodo: 'Sept 2023 — Presente',
     rol: 'Diseñadora Gráfica',
-    desc: 'Diseño de contenido visual para redes sociales de una empresa de merchandising promocional. Producción regular de piezas para campañas estacionales, motion graphics y catálogos de producto.',
+    desc: 'Diseño de contenido visual para redes sociales de una empresa de merchandising promocional nacional. Producción regular de piezas para campañas estacionales, motion graphics y catálogos de producto.',
     posts: [
-      'https://www.instagram.com/prowork.merchandising/p/DRmd0p4CNnH/',
-      'https://www.instagram.com/p/DTsQUCnAXC8/',
-      'https://www.instagram.com/p/DV_Bm9ej54s/',
-      'https://www.instagram.com/prowork.merchandising/reel/DPW5p3fCcaj/',
+      { img: proworkPost1, url: 'https://www.instagram.com/prowork.merchandising/p/DRmd0p4CNnH/' },
+      { img: proworkPost2, url: 'https://www.instagram.com/p/DTsQUCnAXC8/' },
+      { img: proworkPost3, url: 'https://www.instagram.com/p/DV_Bm9ej54s/' },
+      { img: proworkPost4, url: 'https://www.instagram.com/prowork.merchandising/reel/DPW5p3fCcaj/' },
     ],
   },
   {
@@ -57,14 +71,13 @@ export const experiencia = [
     nombre: 'Grupo Flash',
     periodo: 'Sept 2024 — Jul 2025',
     rol: 'Diseñadora Gráfica — Mis Envíos · Logísticas Especiales · Flash',
-    desc: 'Responsable del diseño visual para tres marcas del grupo empresarial. Realicé la identidad corporativa del grupo empresarial desde cero, diseño de logo, papelería y señalética. Producción de contenido para redes en colaboración directa con Community Manager y el equipo de marketing para las tres marcas.',
+    desc: 'Responsable del diseño visual para tres marcas del grupo empresarial. Realicé la identidad corporativa del grupo empresarial desde cero, diseño de logo, papelería y señalética.',
     posts: [
-      'https://www.instagram.com/misenvios/p/DKudWIxMcw-/',
-      'https://www.instagram.com/misenvios/p/DLm20PttFLU/',
-      'https://www.instagram.com/p/DLFm_P3ur2y/',
-      'https://www.instagram.com/p/DKrvZQpOod5/',
-      'https://www.instagram.com/p/DFu2dTDRFkE/',
-      'https://www.instagram.com/p/DIy7yJiuhGk/',
+      { img: flashPost1, url: 'https://www.instagram.com/p/DIy7yJiuhGk/'},
+      { img: flashPost2, url: 'https://www.instagram.com/misenvios/p/DLm20PttFLU/' },
+      { img: flashPost3, url: 'https://www.instagram.com/p/DFu2dTDRFkE/' },
+      { img: flashPost4, url: 'https://www.instagram.com/misenvios/p/DKudWIxMcw-/' },
+      { img: flashPost5, url: 'https://www.instagram.com/p/DLFm_P3ur2y/' },
     ],
   },
   {
@@ -72,11 +85,10 @@ export const experiencia = [
     nombre: 'UNSTA — Servicios CEO',
     periodo: 'Jun 2022 — Oct 2023',
     rol: 'Diseñadora Gráfica',
-    desc: 'Producción de contenido multimedia para comunicación institucional universitaria: campañas de admisión, spots, GIFs y videos. Diseño gráfico para comunicación interna y externa en múltiples formatos y plataformas.',
+    desc: 'Producción de contenido multimedia para comunicación institucional universitaria: campañas de admisión, spots, GIFs y videos.',
     posts: [
-      'https://www.instagram.com/p/Cd5z-HXl-pq/',
-      'https://www.instagram.com/p/CgCsOeElajD/',
-      'https://www.instagram.com/universidadunsta/reel/CiKsG7KPoFW/',
+      { img: unstaPost1, url: 'https://www.instagram.com/p/Cd5z-HXl-pq/' },
+      { img: unstaPost2, url: 'https://www.instagram.com/p/CgCsOeElajD/' },
     ],
   },
 ]
