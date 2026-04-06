@@ -58,7 +58,7 @@ export const experiencia = [
     nombre: 'Grupo Prowork',
     periodo: 'Sept 2023 — Presente',
     rol: 'Diseñadora Gráfica',
-    desc: 'Diseño de contenido visual para redes sociales de una empresa de merchandising promocional nacional. Producción regular de piezas para campañas estacionales, motion graphics y catálogos de producto.',
+    desc: 'Diseño de contenido visual para redes sociales de una empresa de merchandising promocional nacional.',
     posts: [
       { img: proworkPost1, url: 'https://www.instagram.com/prowork.merchandising/p/DRmd0p4CNnH/' },
       { img: proworkPost2, url: 'https://www.instagram.com/p/DTsQUCnAXC8/' },
@@ -71,13 +71,13 @@ export const experiencia = [
     nombre: 'Grupo Flash',
     periodo: 'Sept 2024 — Jul 2025',
     rol: 'Diseñadora Gráfica — Mis Envíos · Logísticas Especiales · Flash',
-    desc: 'Responsable del diseño visual para tres marcas del grupo empresarial. Realicé la identidad corporativa del grupo empresarial desde cero, diseño de logo, papelería y señalética.',
+    desc: 'Responsable del diseño visual para tres marcas del grupo empresarial. Realicé la identidad corporativa del grupo empresarial desde cero.',
     posts: [
-      { img: flashPost1, url: 'https://www.instagram.com/p/DIy7yJiuhGk/'},
+      { img: flashPost1, url: 'https://www.instagram.com/misenvios/p/DKudWIxMcw-/' },
       { img: flashPost2, url: 'https://www.instagram.com/misenvios/p/DLm20PttFLU/' },
-      { img: flashPost3, url: 'https://www.instagram.com/p/DFu2dTDRFkE/' },
-      { img: flashPost4, url: 'https://www.instagram.com/misenvios/p/DKudWIxMcw-/' },
-      { img: flashPost5, url: 'https://www.instagram.com/p/DLFm_P3ur2y/' },
+      { img: flashPost3, url: 'https://www.instagram.com/p/DLFm_P3ur2y/' },
+      { img: flashPost4, url: 'https://www.instagram.com/p/DKrvZQpOod5/' },
+      { img: flashPost5, url: 'https://www.instagram.com/p/DFu2dTDRFkE/' },
     ],
   },
   {
@@ -85,7 +85,7 @@ export const experiencia = [
     nombre: 'UNSTA — Servicios CEO',
     periodo: 'Jun 2022 — Oct 2023',
     rol: 'Diseñadora Gráfica',
-    desc: 'Producción de contenido multimedia para comunicación institucional universitaria: campañas de admisión, spots, GIFs y videos.',
+    desc: 'Producción de contenido multimedia para comunicación institucional universitaria.',
     posts: [
       { img: unstaPost1, url: 'https://www.instagram.com/p/Cd5z-HXl-pq/' },
       { img: unstaPost2, url: 'https://www.instagram.com/p/CgCsOeElajD/' },
