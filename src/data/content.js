@@ -3,19 +3,19 @@ import warnerImg from '../assets/warner.png'
 import beautyouImg from '../assets/beautyou.png'
 import moonImg from '../assets/moon.png'
 
-import proworkPost1 from '../assets/pw 1.png'
-import proworkPost2 from '../assets/pw 2.png'
-import proworkPost3 from '../assets/pw 3.png'
-import proworkPost4 from '../assets/pw 4.png'
+import proworkPost1 from '../assets/pw-1.jpg'
+import proworkPost2 from '../assets/pw-2.jpg'
+import proworkPost3 from '../assets/pw-3.jpg'
+import proworkPost4 from '../assets/pw-4.png'
 
-import flashPost1 from '../assets/flash 1.png'
-import flashPost2 from '../assets/flash 2.png'
-import flashPost3 from '../assets/flash 3.png'
-import flashPost4 from '../assets/flash 4.png'
-import flashPost5 from '../assets/flash 5.png'
+import flashPost1 from '../assets/flash-1.jpg'
+import flashPost2 from '../assets/flash-2.jpg'
+import flashPost3 from '../assets/flash-3.jpg'
+import flashPost4 from '../assets/flash-4.jpg'
+import flashPost5 from '../assets/flash-5.jpg'
 
-import unstaPost1 from '../assets/unsta 1.png'
-import unstaPost2 from '../assets/unsta 2.png'
+import unstaPost1 from '../assets/unsta-1.jpg'
+import unstaPost2 from '../assets/unsta-2.jpg'
 
 export const proyectos = [
   {
