@@ -63,7 +63,7 @@ export const experiencia = [
       { img: proworkPost1, url: 'https://www.instagram.com/prowork.merchandising/p/DRmd0p4CNnH/' },
       { img: proworkPost2, url: 'https://www.instagram.com/p/DTsQUCnAXC8/' },
       { img: proworkPost3, url: 'https://www.instagram.com/p/DV_Bm9ej54s/' },
-      { img: proworkPost4, url: 'https://www.instagram.com/prowork.merchandising/reel/DPW5p3fCcaj/' },
+      { img: proworkPost4, url: 'https://www.instagram.com/p/DR7ERT6iCei/' },
     ],
   },
   {
@@ -73,11 +73,11 @@ export const experiencia = [
     rol: 'Diseñadora Gráfica — Mis Envíos · Logísticas Especiales · Flash',
     desc: 'Responsable del diseño visual para tres marcas del grupo empresarial. Realicé la identidad corporativa del grupo empresarial desde cero.',
     posts: [
-      { img: flashPost1, url: 'https://www.instagram.com/misenvios/p/DKudWIxMcw-/' },
+      { img: flashPost1, url: 'https://www.instagram.com/p/DIy7yJiuhGk/' },
       { img: flashPost2, url: 'https://www.instagram.com/misenvios/p/DLm20PttFLU/' },
-      { img: flashPost3, url: 'https://www.instagram.com/p/DLFm_P3ur2y/' },
-      { img: flashPost4, url: 'https://www.instagram.com/p/DKrvZQpOod5/' },
-      { img: flashPost5, url: 'https://www.instagram.com/p/DFu2dTDRFkE/' },
+      { img: flashPost3, url: 'https://www.instagram.com/p/DFu2dTDRFkE/' },
+      { img: flashPost4, url: 'https://www.instagram.com/misenvios/p/DKudWIxMcw-/' },
+      { img: flashPost5, url: 'https://www.instagram.com/p/DLFm_P3ur2y/' },
     ],
   },
   {
