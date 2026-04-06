@@ -1,6 +1,5 @@
 import React from 'react'
 import { experiencia } from '../data/content'
-import InstagramEmbed from './InstagramEmbed' 
 import styles from './Experiencia.module.css'
 
 export default function Experiencia() {
