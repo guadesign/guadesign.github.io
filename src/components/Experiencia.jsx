@@ -30,11 +30,11 @@ export default function Experiencia() {
                   >
                     <img 
                       src={post.img} 
-                      alt={`Trabajo en ${exp.nombre}`} 
+                      alt={`Trabajo de diseño en ${exp.nombre}`} 
                       className={styles.postImg} 
                     />
                     <div className={styles.overlay}>
-                      <span>Ver post</span>
+                      <div className={styles.instaBtn}>Ver post</div>
                     </div>
                   </a>
                 ))}
