@@ -1,83 +1,83 @@
-.experiencia {
-  padding: 6rem 3rem;
-  background: var(--white);
-}
-
-.h2 {
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 4vw, 4rem);
-  font-weight: 900;
-  margin-bottom: 3rem;
-}
-
-.block {
-  margin-bottom: 5rem;
-  border-left: 4px solid var(--yellow);
-  padding-left: 2rem;
-}
-
-.header {
-  display: flex;
-  align-items: baseline;
-  gap: 1rem;
-  margin-bottom: 0.4rem;
-  flex-wrap: wrap;
-}
-
-.nombre {
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  font-weight: 900;
-}
-
-.periodo {
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  opacity: 0.5;
-}
-
-.rol {
-  font-size: 0.95rem;
-  color: var(--orange);
-  font-weight: 500;
-  margin-bottom: 0.8rem;
-}
-
-.desc {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: #555;
-  max-width: 600px;
-  margin-bottom: 1.5rem;
-}
-
-/* --- NUEVAS REGLAS PARA LOS POSTS DE INSTAGRAM --- */
-
 .instagramGrid {
   display: grid;
-  /* Esto hace que entren 3 posteos si hay espacio, sino se acomodan solos */
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
-  margin-top: 2.5rem;
+  /* Grilla responsiva: se adapta sola al ancho de pantalla */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
   width: 100%;
 }
 
 .postWrapper {
+  position: relative;
   width: 100%;
-  max-width: 400px;
-  /* Centra el posteo en su columna */
-  margin: 0 auto; 
-  /* Un toque de sombra suave para que resalte del fondo blanco */
-  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));
+  /* FORZAR CUADRADO: Esto mantiene la proporción 1:1 siempre */
+  aspect-ratio: 1 / 1; 
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f0f0f0;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
+.postImg {
+  width: 100%;
+  height: 100%;
+  /* Cubre el contenedor cuadrado sin deformar la imagen */
+  object-fit: cover; 
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.postWrapper:hover .overlay {
+  opacity: 1;
+}
+
+.postWrapper:hover {
+  transform: scale(1.02);
+}
+
+/* BOTÓN ESTILO INSTAGRAM */
+.instaBtn {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVE PARA MÓVILES */
 @media (max-width: 768px) {
-  .experiencia { padding: 4rem 1.5rem; }
-  .block { padding-left: 1rem; }
-  
   .instagramGrid {
-    grid-template-columns: 1fr; /* En celu, un posteo abajo del otro */
-    gap: 1.5rem;
+    /* En celulares mostramos 2 columnas para que no queden tan chiquitos */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .instaBtn {
+    padding: 8px 15px;
+    font-size: 0.75rem;
+  }
+  
+  /* En móviles, podemos dejar el botón siempre visible o que aparezca al tocar */
+  .overlay {
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 1;
   }
 }
