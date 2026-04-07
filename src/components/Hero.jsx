@@ -12,7 +12,7 @@ export default function Hero() {
       </div>
 
       <div className={styles.left}>
-        <div className={styles.tag}>✦ Disponible para freelance &amp; full time</div>
+        <div className={styles.tag}>✦ Disponible para proyectos freelance, part time &amp; full time</div>
         <h1 className={styles.h1}>
           Guada<br />
           <span>Eguiazabal</span>
