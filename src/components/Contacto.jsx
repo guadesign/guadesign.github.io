@@ -5,7 +5,7 @@ export default function Contacto() {
     <>
       <section id="contacto" className={styles.contacto}>
         <h2 className={styles.h2}>¿Trabajamos<br /><em>juntos?</em></h2>
-        <p className={styles.sub}>Estoy disponible para proyectos freelance y oportunidades full time.</p>
+        <p className={styles.sub}>Estoy disponible para proyectos freelance, part time y full time.</p>
         <div className={styles.links}>
           <a href="mailto:mguadalupeeguiazabal@gmail.com" className="btn btn-white">
             mguadalupeeguiazabal@gmail.com
@@ -13,7 +13,7 @@ export default function Contacto() {
           <a href="https://www.behance.net/itsmeguadi" target="_blank" rel="noreferrer" className="btn btn-outline-white">
             Behance
           </a>
-          <a href="https://www.linkedin.com/in/guadalupe-eguiazabal" target="_blank" rel="noreferrer" className="btn btn-outline-white">
+          <a href="https://www.linkedin.com/in/mgeguiazabal" target="_blank" rel="noreferrer" className="btn btn-outline-white">
             LinkedIn
           </a>
         </div>
