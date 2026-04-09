@@ -94,7 +94,7 @@ export const experiencia = [
 ]
 
 export const skills = [
-  'Visual Identity', 'Motion Graphics', 'Editorial Design',
-  'Social Media', 'After Effects', 'Photoshop',
+  'Identidad visual', 'Motion graphics', 'Diseño editorial',
+  'Redes sociales', 'After Effects', 'Photoshop',
   'Illustrator', 'Figma', 'Premiere Pro', 'InDesign',
 ]
