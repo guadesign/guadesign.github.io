@@ -6,7 +6,8 @@ export default function Nav() {
     <nav className={styles.nav}>
       <a href="#proyectos">Proyectos</a>
       <a href="#experiencia">Trayectoria</a>
-      <a href="#skills">Habilidades</a>
+      <a href="#sobre">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   )
 }
