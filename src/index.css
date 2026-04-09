@@ -71,3 +71,35 @@ img { display: block; max-width: 100%; }
 .btn-white:hover { background: var(--yellow); border-color: var(--yellow); }
 .btn-outline-white { background: transparent; color: var(--white); border-color: var(--white); }
 .btn-outline-white:hover { background: rgba(255,255,255,0.15); }
+
+.lang-toggle-btn {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 10000;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-family: sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+}
+
+.lang-divider {
+  opacity: 0.2;
+}
+
+.active-lang {
+  color: #ff6b00;
+}
+
+@media (max-width: 768px) {
+  .lang-toggle-btn {
+    top: 15px;
+    right: 15px;
+  }
+}
