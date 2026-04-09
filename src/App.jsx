@@ -1,4 +1,5 @@
 import React from 'react'
+import Cursor from './components/Cursor'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Sobre from './components/Sobre'
@@ -10,6 +11,7 @@ import './index.css'
 function App() {
   return (
     <div className="app-container">
+      <Cursor />
       <Nav />
       <main>
         <Hero />
