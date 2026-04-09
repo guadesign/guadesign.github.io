@@ -35,7 +35,7 @@ export const proyectos = [
     titulo: 'Warner Music Group Broadcast Pack',
     desc: {
       spa: 'Sistema de animaciones y piezas gráficas para broadcasting de una de las majors más importantes de la industria musical.',
-      eng: 'Animation system and graphic pieces for broadcasting for one of the most important majors in the music industry.'
+      eng: 'Animation system and graphic pieces for broadcasting for one of the major labels in the music industry.'
     },
     img: warnerImg,
     url: 'https://www.behance.net/gallery/157765497/Warner-Music-Group-BROADCAST-PACK',
@@ -68,7 +68,7 @@ export const experiencia = [
   {
     id: 'prowork',
     nombre: 'Grupo Prowork',
-    periodo: 'Sept 2023 — Present',
+    periodo: { spa: 'Sept 2023 — Presente', eng: 'Sept 2023 — Present' },
     rol: { spa: 'Diseñadora Gráfica', eng: 'Graphic Designer' },
     desc: {
       spa: 'Diseño de contenido visual para redes sociales de una empresa de merchandising promocional nacional.',
@@ -84,14 +84,14 @@ export const experiencia = [
   {
     id: 'flash',
     nombre: 'Grupo Flash',
-    periodo: 'Sept 2024 — Jul 2025',
+    periodo: { spa: 'Sept 2024 — Jul 2025', eng: 'Sept 2024 — Jul 2025' },
     rol: { 
       spa: 'Diseñadora Gráfica — Mis Envíos · Logísticas Especiales · Flash', 
-      eng: 'Graphic Designer — Mis Envíos · Logísticas Especiales · Flash' 
+      eng: 'Graphic Designer — Mis Envíos · Special Logistics · Flash' 
     },
     desc: {
       spa: 'Responsable del diseño visual para tres marcas del grupo empresarial. Realicé la identidad corporativa del grupo empresarial desde cero.',
-      eng: 'Responsible for the visual design of three brands within the business group. Developed the corporate identity from scratch.'
+      eng: 'Responsible for the visual design of three brands within the corporate group. Developed the corporate identity from scratch.'
     },
     posts: [
       { img: flashPost1, url: 'https://www.instagram.com/misenvios/p/DKudWIxMcw-/' },
@@ -104,7 +104,7 @@ export const experiencia = [
   {
     id: 'unsta',
     nombre: 'UNSTA — Servicios CEO',
-    periodo: 'Jun 2022 — Oct 2023',
+    periodo: { spa: 'Jun 2022 — Oct 2023', eng: 'Jun 2022 — Oct 2023' },
     rol: { spa: 'Diseñadora Gráfica', eng: 'Graphic Designer' },
     desc: {
       spa: 'Producción de contenido multimedia para comunicación institucional universitaria.',
@@ -117,14 +117,22 @@ export const experiencia = [
   },
 ]
 
-export const labels = {
-  trayectoria: { spa: '03 — Trayectoria', eng: '03 — Experience' },
-  tituloExp: { spa: 'Experiencia profesional', eng: 'Professional Experience' },
-  verPost: { spa: 'Ver post', eng: 'View post' }
-}
-
 export const skills = [
   'Visual Identity', 'Motion Graphics', 'Editorial Design',
   'Social Media', 'After Effects', 'Photoshop',
   'Illustrator', 'Figma', 'Premiere Pro', 'InDesign',
 ]
+
+export const labels = {
+  navProyectos: { spa: 'Proyectos', eng: 'Projects' },
+  navExperiencia: { spa: 'Experiencia', eng: 'Experience' },
+  navSkills: { spa: 'Habilidades', eng: 'Skills' },
+  labelProyectos: { spa: '02 — Selección', eng: '02 — Selection' },
+  tituloProyectos: { spa: 'Proyectos destacados', eng: 'Featured Projects' },
+  labelExp: { spa: '03 — Trayectoria', eng: '03 — Experience' },
+  tituloExp: { spa: 'Experiencia profesional', eng: 'Professional Experience' },
+  labelSkills: { spa: '04 — Habilidades', eng: '04 — Skills' },
+  verPost: { spa: 'Ver post', eng: 'View post' },
+  verBehance: { spa: 'Ver en Behance', eng: 'View on Behance' },
+  btnLang: { spa: 'CAMBIAR A ING', eng: 'SWITCH TO SPA' }
+}
