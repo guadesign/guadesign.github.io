@@ -5,7 +5,7 @@ import styles from './Experiencia.module.css'
 export default function Experiencia() {
   return (
     <section id="experiencia" className={styles.experiencia}>
-      <div className="section-label">03 — TRAYECTORIA</div>
+      <div className="section-label">03 — Trayectoria</div>
       <h2 className={styles.h2}>Experiencia profesional</h2>
       
       <div className={styles.timeline}>
@@ -28,9 +28,13 @@ export default function Experiencia() {
                     rel="noopener noreferrer" 
                     className={styles.postWrapper}
                   >
-                    <img src={post.img} alt="Design work" className={styles.postImg} />
+                    <img 
+                      src={post.img} 
+                      alt={`Trabajo en ${exp.nombre}`} 
+                      className={styles.postImg} 
+                    />
                     <div className={styles.overlay}>
-                      <div className={styles.instaBtn}>Ver post</div>
+                      <span>Ver post</span>
                     </div>
                   </a>
                 ))}
