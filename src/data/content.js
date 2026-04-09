@@ -20,33 +20,45 @@ import unstaPost2 from '../assets/unsta-2.jpg'
 export const proyectos = [
   {
     id: 1,
-    tag: 'Diseño gráfico · Swiss Design',
+    tag: { spa: 'Diseño gráfico · Swiss Design', eng: 'Graphic Design · Swiss Design' },
     titulo: 'Emerge — Poster suizo',
-    desc: 'Pieza editorial de diseño suizo. El proyecto más visto en Behance. Composición tipográfica con rigor geométrico y fuerza visual.',
+    desc: { 
+      spa: 'Pieza editorial de diseño suizo. El proyecto más visto en Behance. Composición tipográfica con rigor geométrico y fuerza visual.',
+      eng: 'Swiss design editorial piece. Most viewed project on Behance. Typographic composition with geometric rigor and visual strength.'
+    },
     img: emergeImg,
     url: 'https://www.behance.net/gallery/204110719/01-EMERGE-SWISS-DESIGN-FUNDAMENTALS',
   },
   {
     id: 2,
-    tag: 'Motion · Broadcast',
+    tag: { spa: 'Motion · Broadcast', eng: 'Motion · Broadcast' },
     titulo: 'Warner Music Group Broadcast Pack',
-    desc: 'Sistema de animaciones y piezas gráficas para broadcasting de una de las majors más importantes de la industria musical.',
+    desc: {
+      spa: 'Sistema de animaciones y piezas gráficas para broadcasting de una de las majors más importantes de la industria musical.',
+      eng: 'Animation system and graphic pieces for broadcasting for one of the most important majors in the music industry.'
+    },
     img: warnerImg,
     url: 'https://www.behance.net/gallery/157765497/Warner-Music-Group-BROADCAST-PACK',
   },
   {
     id: 3,
-    tag: 'FUI · Motion · UI Design',
+    tag: { spa: 'FUI · Motion · UI Design', eng: 'FUI · Motion · UI Design' },
     titulo: 'Mission to the Moon — FUI',
-    desc: 'Interfaz de usuario ficticia (Fictional User Interface) con estética espacial. Sistema gráfico de instrumentación interactiva.',
+    desc: {
+      spa: 'Interfaz de usuario ficticia (Fictional User Interface) con estética espacial. Sistema gráfico de instrumentación interactiva.',
+      eng: 'Fictional User Interface (FUI) with space aesthetics. Graphic system for interactive instrumentation.'
+    },
     img: moonImg,
     url: 'https://www.behance.net/gallery/186560773/Mission-to-the-Moon-FUI-Design',
   },
   {
     id: 4,
-    tag: 'Identidad visual · Branding',
+    tag: { spa: 'Identidad visual · Branding', eng: 'Visual Identity · Branding' },
     titulo: 'Beautyou — Brief by Croca',
-    desc: 'Desarrollo de identidad visual para marca de ropa interior femenina. Proyecto de branding completo con sistema gráfico y aplicaciones.',
+    desc: {
+      spa: 'Desarrollo de identidad visual para marca de ropa interior femenina. Proyecto de branding completo con sistema gráfico y aplicaciones.',
+      eng: 'Visual identity development for a women\'s underwear brand. Full branding project including graphic system and applications.'
+    },
     img: beautyouImg,
     url: 'https://www.behance.net/gallery/138887507/Beautyou-briefbycroca',
   },
@@ -56,36 +68,48 @@ export const experiencia = [
   {
     id: 'prowork',
     nombre: 'Grupo Prowork',
-    periodo: 'Sept 2023 — Presente',
-    rol: 'Diseñadora Gráfica',
-    desc: 'Diseño de contenido visual para redes sociales de una empresa de merchandising promocional nacional.',
+    periodo: 'Sept 2023 — Present',
+    rol: { spa: 'Diseñadora Gráfica', eng: 'Graphic Designer' },
+    desc: {
+      spa: 'Diseño de contenido visual para redes sociales de una empresa de merchandising promocional nacional.',
+      eng: 'Visual content design for social media for a national promotional merchandising company.'
+    },
     posts: [
       { img: proworkPost1, url: 'https://www.instagram.com/prowork.merchandising/p/DRmd0p4CNnH/' },
       { img: proworkPost2, url: 'https://www.instagram.com/p/DTsQUCnAXC8/' },
       { img: proworkPost3, url: 'https://www.instagram.com/p/DV_Bm9ej54s/' },
-      { img: proworkPost4, url: 'https://www.instagram.com/p/DR7ERT6iCei/' },
+      { img: proworkPost4, url: 'https://www.instagram.com/prowork.merchandising/reel/DPW5p3fCcaj/' },
     ],
   },
   {
     id: 'flash',
     nombre: 'Grupo Flash',
     periodo: 'Sept 2024 — Jul 2025',
-    rol: 'Diseñadora Gráfica — Mis Envíos · Logísticas Especiales · Flash',
-    desc: 'Responsable del diseño visual para tres marcas del grupo empresarial. Realicé la identidad corporativa del grupo empresarial desde cero.',
+    rol: { 
+      spa: 'Diseñadora Gráfica — Mis Envíos · Logísticas Especiales · Flash', 
+      eng: 'Graphic Designer — Mis Envíos · Logísticas Especiales · Flash' 
+    },
+    desc: {
+      spa: 'Responsable del diseño visual para tres marcas del grupo empresarial. Realicé la identidad corporativa del grupo empresarial desde cero.',
+      eng: 'Responsible for the visual design of three brands within the business group. Developed the corporate identity from scratch.'
+    },
     posts: [
-      { img: flashPost1, url: 'https://www.instagram.com/p/DIy7yJiuhGk/' },
+      { img: flashPost1, url: 'https://www.instagram.com/misenvios/p/DKudWIxMcw-/' },
       { img: flashPost2, url: 'https://www.instagram.com/misenvios/p/DLm20PttFLU/' },
-      { img: flashPost3, url: 'https://www.instagram.com/p/DFu2dTDRFkE/' },
-      { img: flashPost4, url: 'https://www.instagram.com/misenvios/p/DKudWIxMcw-/' },
-      { img: flashPost5, url: 'https://www.instagram.com/p/DLFm_P3ur2y/' },
+      { img: flashPost3, url: 'https://www.instagram.com/p/DLFm_P3ur2y/' },
+      { img: flashPost4, url: 'https://www.instagram.com/p/DKrvZQpOod5/' },
+      { img: flashPost5, url: 'https://www.instagram.com/p/DFu2dTDRFkE/' },
     ],
   },
   {
     id: 'unsta',
     nombre: 'UNSTA — Servicios CEO',
     periodo: 'Jun 2022 — Oct 2023',
-    rol: 'Diseñadora Gráfica',
-    desc: 'Producción de contenido multimedia para comunicación institucional universitaria.',
+    rol: { spa: 'Diseñadora Gráfica', eng: 'Graphic Designer' },
+    desc: {
+      spa: 'Producción de contenido multimedia para comunicación institucional universitaria.',
+      eng: 'Multimedia content production for university institutional communication.'
+    },
     posts: [
       { img: unstaPost1, url: 'https://www.instagram.com/p/Cd5z-HXl-pq/' },
       { img: unstaPost2, url: 'https://www.instagram.com/p/CgCsOeElajD/' },
@@ -93,8 +117,14 @@ export const experiencia = [
   },
 ]
 
+export const labels = {
+  trayectoria: { spa: '03 — Trayectoria', eng: '03 — Experience' },
+  tituloExp: { spa: 'Experiencia profesional', eng: 'Professional Experience' },
+  verPost: { spa: 'Ver post', eng: 'View post' }
+}
+
 export const skills = [
-  'Identidad visual', 'Motion graphics', 'Diseño editorial',
-  'Redes sociales', 'After Effects', 'Photoshop',
+  'Visual Identity', 'Motion Graphics', 'Editorial Design',
+  'Social Media', 'After Effects', 'Photoshop',
   'Illustrator', 'Figma', 'Premiere Pro', 'InDesign',
 ]
