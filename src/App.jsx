@@ -1,61 +1,33 @@
-import { useEffect, useRef } from 'react'
-import Nav from './components/Nav'
-import Hero from './components/Hero'
-import Sobre from './components/Sobre'
-import Proyectos from './components/Proyectos'
+import React, { useState } from 'react'
 import Experiencia from './components/Experiencia'
-import Contacto from './components/Contacto'
+// ... importa tus otros componentes
 
-// Cargar script de Instagram embeds
-function useInstagramEmbed() {
-  useEffect(() => {
-    if (document.getElementById('ig-embed-script')) return
-    const script = document.createElement('script')
-    script.id = 'ig-embed-script'
-    script.src = '//www.instagram.com/embed.js'
-    script.async = true
-    document.body.appendChild(script)
-  }, [])
-}
+function App() {
+  const [lang, setLang] = useState('spa');
 
-// Custom cursor
-function useCursor() {
-  const cursorRef = useRef()
-  useEffect(() => {
-    const move = (e) => {
-      if (cursorRef.current) {
-        cursorRef.current.style.left = e.clientX + 'px'
-        cursorRef.current.style.top = e.clientY + 'px'
-      }
-    }
-    const over = () => cursorRef.current?.classList.add('big')
-    const out = () => cursorRef.current?.classList.remove('big')
-
-    document.addEventListener('mousemove', move)
-    document.querySelectorAll('a, button').forEach(el => {
-      el.addEventListener('mouseenter', over)
-      el.addEventListener('mouseleave', out)
-    })
-    return () => {
-      document.removeEventListener('mousemove', move)
-    }
-  }, [])
-  return cursorRef
-}
-
-export default function App() {
-  useInstagramEmbed()
-  const cursorRef = useCursor()
+  const toggleLang = () => setLang(prev => prev === 'spa' ? 'eng' : 'spa');
 
   return (
-    <>
-      <div className="cursor" ref={cursorRef} />
-      <Nav />
-      <Hero />
-      <Sobre />
-      <Proyectos />
-      <Experiencia />
-      <Contacto />
-    </>
+    <div className="app-container">
+      {/* Botón flotante SPA/ENG */}
+      <button 
+        onClick={toggleLang}
+        style={{
+          position: 'fixed', top: '20px', right: '20px', zIndex: 9999,
+          padding: '10px 15px', borderRadius: '30px', border: '1px solid #ddd',
+          background: 'white', fontWeight: 'bold', cursor: 'pointer',
+          fontFamily: 'sans-serif', fontSize: '12px'
+        }}
+      >
+        {lang === 'spa' ? 'CAMBIAR A ENG' : 'SWITCH TO SPA'}
+      </button>
+
+      {/* Pasamos el idioma a Experiencia */}
+      <Experiencia lang={lang} />
+      
+      {/* Si querés traducir el resto, hacés lo mismo con Proyectos, etc. */}
+    </div>
   )
 }
+
+export default App
