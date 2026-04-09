@@ -22,7 +22,7 @@ export default function Experiencia() {
               <div className={styles.instagramGrid}>
                 {exp.posts.map((post, index) => (
                   <a key={index} href={post.url} target="_blank" rel="noopener noreferrer" className={styles.postWrapper}>
-                    <img src={post.img} alt="Post" className={styles.postImg} />
+                    <img src={post.img} alt="Trabajo" className={styles.postImg} />
                     <div className={styles.overlay}>
                       <div className={styles.instaBtn}>Ver post</div>
                     </div>
