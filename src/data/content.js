@@ -2,15 +2,18 @@ import emergeImg from '../assets/emerge.png'
 import warnerImg from '../assets/warner.png'
 import beautyouImg from '../assets/beautyou.png'
 import moonImg from '../assets/moon.png'
+
 import proworkPost1 from '../assets/pw-1.jpg'
 import proworkPost2 from '../assets/pw-2.jpg'
 import proworkPost3 from '../assets/pw-3.jpg'
 import proworkPost4 from '../assets/pw-4.png'
+
 import flashPost1 from '../assets/flash-1.jpg'
 import flashPost2 from '../assets/flash-2.jpg'
 import flashPost3 from '../assets/flash-3.jpg'
 import flashPost4 from '../assets/flash-4.jpg'
 import flashPost5 from '../assets/flash-5.jpg'
+
 import unstaPost1 from '../assets/unsta-1.jpg'
 import unstaPost2 from '../assets/unsta-2.jpg'
 
@@ -19,18 +22,34 @@ export const proyectos = [
     id: 1,
     tag: 'Diseño gráfico · Swiss Design',
     titulo: 'Emerge — Poster suizo',
-    desc: 'Pieza editorial de diseño suizo. El proyecto más visto en Behance.',
+    desc: 'Pieza editorial de diseño suizo. El proyecto más visto en Behance. Composición tipográfica con rigor geométrico y fuerza visual.',
     img: emergeImg,
     url: 'https://www.behance.net/gallery/204110719/01-EMERGE-SWISS-DESIGN-FUNDAMENTALS',
   },
   {
     id: 2,
     tag: 'Motion · Broadcast',
-    titulo: 'Warner Music Group',
-    desc: 'Sistema de animaciones para broadcasting de la industria musical.',
+    titulo: 'Warner Music Group Broadcast Pack',
+    desc: 'Sistema de animaciones y piezas gráficas para broadcasting de una de las majors más importantes de la industria musical.',
     img: warnerImg,
     url: 'https://www.behance.net/gallery/157765497/Warner-Music-Group-BROADCAST-PACK',
-  }
+  },
+  {
+    id: 3,
+    tag: 'FUI · Motion · UI Design',
+    titulo: 'Mission to the Moon — FUI',
+    desc: 'Interfaz de usuario ficticia (Fictional User Interface) con estética espacial. Sistema gráfico de instrumentación interactiva.',
+    img: moonImg,
+    url: 'https://www.behance.net/gallery/186560773/Mission-to-the-Moon-FUI-Design',
+  },
+  {
+    id: 4,
+    tag: 'Identidad visual · Branding',
+    titulo: 'Beautyou — Brief by Croca',
+    desc: 'Desarrollo de identidad visual para marca de ropa interior femenina. Proyecto de branding completo con sistema gráfico y aplicaciones.',
+    img: beautyouImg,
+    url: 'https://www.behance.net/gallery/138887507/Beautyou-briefbycroca',
+  },
 ]
 
 export const experiencia = [
@@ -39,7 +58,7 @@ export const experiencia = [
     nombre: 'Grupo Prowork',
     periodo: 'Sept 2023 — Presente',
     rol: 'Diseñadora Gráfica',
-    desc: 'Diseño de contenido visual para redes sociales de merchandising promocional.',
+    desc: 'Diseño de contenido visual para redes sociales de una empresa de merchandising promocional nacional.',
     posts: [
       { img: proworkPost1, url: 'https://www.instagram.com/prowork.merchandising/p/DRmd0p4CNnH/' },
       { img: proworkPost2, url: 'https://www.instagram.com/p/DTsQUCnAXC8/' },
@@ -51,8 +70,8 @@ export const experiencia = [
     id: 'flash',
     nombre: 'Grupo Flash',
     periodo: 'Sept 2024 — Jul 2025',
-    rol: 'Diseñadora Gráfica',
-    desc: 'Responsable del diseño visual e identidad corporativa del grupo.',
+    rol: 'Diseñadora Gráfica — Mis Envíos · Logísticas Especiales · Flash',
+    desc: 'Responsable del diseño visual para tres marcas del grupo empresarial. Realicé la identidad corporativa del grupo empresarial desde cero.',
     posts: [
       { img: flashPost1, url: 'https://www.instagram.com/misenvios/p/DKudWIxMcw-/' },
       { img: flashPost2, url: 'https://www.instagram.com/misenvios/p/DLm20PttFLU/' },
@@ -60,7 +79,22 @@ export const experiencia = [
       { img: flashPost4, url: 'https://www.instagram.com/p/DKrvZQpOod5/' },
       { img: flashPost5, url: 'https://www.instagram.com/p/DFu2dTDRFkE/' },
     ],
-  }
+  },
+  {
+    id: 'unsta',
+    nombre: 'UNSTA — Servicios CEO',
+    periodo: 'Jun 2022 — Oct 2023',
+    rol: 'Diseñadora Gráfica',
+    desc: 'Producción de contenido multimedia para comunicación institucional universitaria.',
+    posts: [
+      { img: unstaPost1, url: 'https://www.instagram.com/p/Cd5z-HXl-pq/' },
+      { img: unstaPost2, url: 'https://www.instagram.com/p/CgCsOeElajD/' },
+    ],
+  },
 ]
 
-export const skills = ['Visual Identity', 'Motion Graphics', 'Figma', 'After Effects']
+export const skills = [
+  'Visual Identity', 'Motion Graphics', 'Editorial Design',
+  'Social Media', 'After Effects', 'Photoshop',
+  'Illustrator', 'Figma', 'Premiere Pro', 'InDesign',
+]
