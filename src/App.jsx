@@ -1,31 +1,42 @@
 import React, { useState } from 'react'
+import { labels } from './data/content'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Proyectos from './components/Proyectos'
 import Experiencia from './components/Experiencia'
-// ... importa tus otros componentes
+import Skills from './components/Skills'
+import Contacto from './components/Contacto'
+import './App.css'
 
 function App() {
-  const [lang, setLang] = useState('spa');
+  const [lang, setLang] = useState('spa')
 
-  const toggleLang = () => setLang(prev => prev === 'spa' ? 'eng' : 'spa');
+  const toggleLang = () => {
+    setLang(prev => (prev === 'spa' ? 'eng' : 'spa'))
+  }
 
   return (
     <div className="app-container">
-      {/* Botón flotante SPA/ENG */}
       <button 
-        onClick={toggleLang}
-        style={{
-          position: 'fixed', top: '20px', right: '20px', zIndex: 9999,
-          padding: '10px 15px', borderRadius: '30px', border: '1px solid #ddd',
-          background: 'white', fontWeight: 'bold', cursor: 'pointer',
-          fontFamily: 'sans-serif', fontSize: '12px'
-        }}
+        onClick={toggleLang} 
+        className="lang-toggle-btn"
+        aria-label="Toggle language"
       >
-        {lang === 'spa' ? 'CAMBIAR A ENG' : 'SWITCH TO SPA'}
+        <span className={lang === 'spa' ? 'active-lang' : ''}>SPA</span>
+        <span className="lang-divider">|</span>
+        <span className={lang === 'eng' ? 'active-lang' : ''}>ENG</span>
       </button>
 
-      {/* Pasamos el idioma a Experiencia */}
-      <Experiencia lang={lang} />
+      <Navbar lang={lang} />
       
-      {/* Si querés traducir el resto, hacés lo mismo con Proyectos, etc. */}
+      <main>
+        <Hero lang={lang} />
+        <Proyectos lang={lang} />
+        <Experiencia lang={lang} />
+        <Skills lang={lang} />
+      </main>
+
+      <Contacto lang={lang} />
     </div>
   )
 }
