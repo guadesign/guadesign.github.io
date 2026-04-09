@@ -1,9 +1,9 @@
 import React from 'react'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
+import Sobre from './components/Sobre'
 import Proyectos from './components/Proyectos'
 import Experiencia from './components/Experiencia'
-import Skills from './components/Skills'
 import Contacto from './components/Contacto'
 import './index.css'
 
@@ -13,9 +13,9 @@ function App() {
       <Nav />
       <main>
         <Hero />
+        <Sobre />
         <Proyectos />
         <Experiencia />
-        <Skills />
       </main>
       <Contacto />
     </div>
