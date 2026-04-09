@@ -87,7 +87,7 @@ export const experiencia = [
     periodo: { spa: 'Sept 2024 — Jul 2025', eng: 'Sept 2024 — Jul 2025' },
     rol: { 
       spa: 'Diseñadora Gráfica — Mis Envíos · Logísticas Especiales · Flash', 
-      eng: 'Graphic Designer — Mis Envíos · Special Logistics · Flash' 
+      eng: 'Graphic Designer — Special Logistics · Flash' 
     },
     desc: {
       spa: 'Responsable del diseño visual para tres marcas del grupo empresarial. Realicé la identidad corporativa del grupo empresarial desde cero.',
@@ -124,15 +124,11 @@ export const skills = [
 ]
 
 export const labels = {
-  navProyectos: { spa: 'Proyectos', eng: 'Projects' },
-  navExperiencia: { spa: 'Experiencia', eng: 'Experience' },
-  navSkills: { spa: 'Habilidades', eng: 'Skills' },
   labelProyectos: { spa: '02 — Selección', eng: '02 — Selection' },
   tituloProyectos: { spa: 'Proyectos destacados', eng: 'Featured Projects' },
   labelExp: { spa: '03 — Trayectoria', eng: '03 — Experience' },
   tituloExp: { spa: 'Experiencia profesional', eng: 'Professional Experience' },
   labelSkills: { spa: '04 — Habilidades', eng: '04 — Skills' },
   verPost: { spa: 'Ver post', eng: 'View post' },
-  verBehance: { spa: 'Ver en Behance', eng: 'View on Behance' },
-  btnLang: { spa: 'CAMBIAR A ING', eng: 'SWITCH TO SPA' }
+  verBehance: { spa: 'Ver en Behance', eng: 'View on Behance' }
 }
