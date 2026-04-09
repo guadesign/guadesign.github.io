@@ -1,89 +1,56 @@
 .experiencia {
-  padding: 6rem 3rem;
-  background: var(--white);
+  padding: 4rem 2rem;
 }
 
 .h2 {
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 4vw, 4rem);
-  font-weight: 900;
-  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
-/* El bloque principal de cada trabajo */
 .block {
-  margin-bottom: 6rem;
-  border-left: 4px solid var(--yellow);
-  padding-left: 2rem;
-  position: relative;
-}
-
-.header {
-  display: flex;
-  align-items: baseline;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
-  flex-wrap: wrap;
+  margin-bottom: 4rem;
+  border-left: 3px solid #f2c94c;
+  padding-left: 1.5rem;
 }
 
 .nombre {
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  font-weight: 900;
+  font-size: 1.5rem;
   margin: 0;
 }
 
 .periodo {
   font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  opacity: 0.5;
+  color: #888;
 }
 
 .rol {
-  font-size: 0.95rem;
-  color: var(--orange);
-  font-weight: 500;
-  margin-bottom: 1rem;
+  color: #ff6b00;
+  font-weight: bold;
 }
 
 .desc {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: #555;
-  max-width: 700px;
-  margin-bottom: 2.5rem; /* Espacio antes de la grilla */
+  margin: 1rem 0;
+  max-width: 600px;
 }
 
-/* GRILLA DE INSTAGRAM */
 .instagramGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5rem;
-  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .postWrapper {
   position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1; 
-  border-radius: 8px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
-  background: #f0f0f0;
-  display: block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.postWrapper:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
 
 .postImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 .overlay {
@@ -92,12 +59,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0,0,0,0.4);
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: 0.3s;
 }
 
 .postWrapper:hover .overlay {
@@ -105,31 +72,11 @@
 }
 
 .instaBtn {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
   color: white;
-  padding: 8px 16px;
+  padding: 8px 12px;
   border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 0.7rem;
+  font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .experiencia { padding: 4rem 1.5rem; }
-  .block { padding-left: 1.5rem; margin-bottom: 4rem; }
-  
-  .instagramGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .nombre { font-size: 1.5rem; }
-  
-  /* En móviles el botón siempre visible para que se entienda el click */
-  .overlay {
-    background: rgba(0, 0, 0, 0.15);
-    opacity: 1;
-  }
 }
