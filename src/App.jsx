@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { labels } from './data/content'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Proyectos from './components/Proyectos'
@@ -17,11 +16,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <button 
-        onClick={toggleLang} 
-        className="lang-toggle-btn"
-        aria-label="Toggle language"
-      >
+      <button onClick={toggleLang} className="lang-toggle-btn">
         <span className={lang === 'spa' ? 'active-lang' : ''}>SPA</span>
         <span className="lang-divider">|</span>
         <span className={lang === 'eng' ? 'active-lang' : ''}>ENG</span>
