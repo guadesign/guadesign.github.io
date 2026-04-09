@@ -18,11 +18,17 @@ export default function Experiencia() {
             </div>
             <p className={styles.desc}>{exp.desc}</p>
             
-            {exp.posts && (
+            {exp.posts && exp.posts.length > 0 && (
               <div className={styles.instagramGrid}>
                 {exp.posts.map((post, index) => (
-                  <a key={index} href={post.url} target="_blank" rel="noopener noreferrer" className={styles.postWrapper}>
-                    <img src={post.img} alt="Trabajo" className={styles.postImg} />
+                  <a 
+                    key={index} 
+                    href={post.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className={styles.postWrapper}
+                  >
+                    <img src={post.img} alt="Trabajo de diseño" className={styles.postImg} />
                     <div className={styles.overlay}>
                       <div className={styles.instaBtn}>Ver post</div>
                     </div>
