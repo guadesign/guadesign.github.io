@@ -1,53 +1,28 @@
-import InstagramEmbed from './InstagramEmbed';
-import { useEffect, useRef } from 'react'
-import { proyectos } from '../data/content'
+import React from 'react'
+import { proyectos, labels } from '../data/content'
 import styles from './Proyectos.module.css'
 
-export default function Proyectos() {
-  const ref = useRef()
-  
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('visible')),
-      { threshold: 0.1 }
-    )
-    if (ref.current) {
-      ref.current.querySelectorAll('.fade-in').forEach(el => obs.observe(el))
-    }
-    return () => obs.disconnect()
-  }, [])
-
+export default function Proyectos({ lang }) {
   return (
-    <section id="proyectos" className={styles.proyectos} ref={ref}>
-      <div className="section-label">02 — Proyectos</div>
-      <h2 className={styles.h2}>Trabajo selecto</h2>
+    <section id="proyectos" className={styles.proyectos}>
+      <div className="section-label">{labels.labelProyectos[lang]}</div>
+      <h2 className={styles.h2}>{labels.tituloProyectos[lang]}</h2>
+      
       <div className={styles.grid}>
         {proyectos.map(p => (
-          /* Cambié el <a> por un <div> para que el Instagram sea clickeable */
-          <div
-            key={p.id}
-            className={`${styles.card} fade-in`}
-          >
-            {/* Si el proyecto tiene link de Instagram, lo muestra. Si no, muestra la imagen común */}
-            <div className={styles.thumb}>
-              {p.urlInstagram ? (
-                <InstagramEmbed url={p.urlInstagram} />
-              ) : (
-                <img src={p.img} alt={p.titulo} />
-              )}
-            </div>
-
-            <div className={styles.info}>
-              <div className={styles.tag}>{p.tag}</div>
-              <div className={styles.titulo}>
-                {/* Dejé el link solo en el título para que puedas ir a ver el caso completo si querés */}
-                <a href={p.url} target="_blank" rel="noreferrer" className={styles.projectLink}>
-                   {p.titulo}
-                </a>
+          <a key={p.id} href={p.url} target="_blank" rel="noopener noreferrer" className={styles.card}>
+            <div className={styles.imageBox}>
+              <img src={p.img} alt={p.titulo} className={styles.img} />
+              <div className={styles.overlay}>
+                <span>{labels.verBehance[lang]}</span>
               </div>
-              <div className={styles.desc}>{p.desc}</div>
             </div>
-          </div>
+            <div className={styles.info}>
+              <span className={styles.tag}>{p.tag[lang]}</span>
+              <h3 className={styles.titulo}>{p.titulo}</h3>
+              <p className={styles.desc}>{p.desc[lang]}</p>
+            </div>
+          </a>
         ))}
       </div>
     </section>
