@@ -2,18 +2,15 @@ import emergeImg from '../assets/emerge.png'
 import warnerImg from '../assets/warner.png'
 import beautyouImg from '../assets/beautyou.png'
 import moonImg from '../assets/moon.png'
-
 import proworkPost1 from '../assets/pw-1.jpg'
 import proworkPost2 from '../assets/pw-2.jpg'
 import proworkPost3 from '../assets/pw-3.jpg'
 import proworkPost4 from '../assets/pw-4.png'
-
 import flashPost1 from '../assets/flash-1.jpg'
 import flashPost2 from '../assets/flash-2.jpg'
 import flashPost3 from '../assets/flash-3.jpg'
 import flashPost4 from '../assets/flash-4.jpg'
 import flashPost5 from '../assets/flash-5.jpg'
-
 import unstaPost1 from '../assets/unsta-1.jpg'
 import unstaPost2 from '../assets/unsta-2.jpg'
 
@@ -42,7 +39,7 @@ export const experiencia = [
     nombre: 'Grupo Prowork',
     periodo: 'Sept 2023 — Presente',
     rol: 'Diseñadora Gráfica',
-    desc: 'Diseño de contenido visual para redes sociales de merchandising promocional nacional.',
+    desc: 'Diseño de contenido visual para redes sociales de merchandising promocional.',
     posts: [
       { img: proworkPost1, url: 'https://www.instagram.com/prowork.merchandising/p/DRmd0p4CNnH/' },
       { img: proworkPost2, url: 'https://www.instagram.com/p/DTsQUCnAXC8/' },
@@ -66,6 +63,4 @@ export const experiencia = [
   }
 ]
 
-export const skills = [
-  'Visual Identity', 'Motion Graphics', 'Editorial Design', 'Figma'
-]
+export const skills = ['Visual Identity', 'Motion Graphics', 'Figma', 'After Effects']
