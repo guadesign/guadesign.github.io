@@ -7,7 +7,6 @@ export default function Proyectos({ lang }) {
     <section id="proyectos" className={styles.proyectos}>
       <div className="section-label">{labels.labelProyectos[lang]}</div>
       <h2 className={styles.h2}>{labels.tituloProyectos[lang]}</h2>
-      
       <div className={styles.grid}>
         {proyectos.map(p => (
           <a key={p.id} href={p.url} target="_blank" rel="noopener noreferrer" className={styles.card}>
