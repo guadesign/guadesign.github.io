@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
-import { skills } from '../data/content'
+import { skills, labels } from '../data/content'
 import styles from './Sobre.module.css'
 
-export default function Sobre() {
+export default function Sobre({ lang }) {
   const ref = useRef()
   useEffect(() => {
     const obs = new IntersectionObserver(
@@ -15,19 +15,20 @@ export default function Sobre() {
 
   return (
     <section id="sobre" className={styles.sobre} ref={ref}>
-      <div className="section-label">01 — Sobre mí</div>
+      <div className="section-label">{labels.sobreLabel[lang]}</div>
       <div className={styles.layout}>
         <div className={`${styles.tituloCol} fade-in`}>
           <h2 className={styles.h2}>
-            Diseñadora <em>multimedial</em><br />con criterio estético.
+            {lang === 'es'
+              ? <><em>Diseñadora</em><br />multimedial con<br />criterio estético.</>
+              : <>Multimedia<br /><em>designer</em> with<br />aesthetic vision.</>
+            }
           </h2>
         </div>
         <div className={`${styles.contenidoCol} fade-in`}>
-          <p className={styles.bio}>
-            Soy Guada, licenciada en Diseño Multimedial (UNSTA, Tucumán). Con más de 3 años de experiencia en identidad visual, motion design y contenido para redes sociales, trabajé en contextos de agencia, empresa y freelance gestionando múltiples marcas en simultáneo. Domino la suite Adobe y tengo criterio estético, atención al detalle y capacidad para adaptarme a distintos lenguajes de marca.
-          </p>
+          <p className={styles.bio}>{labels.sobreBio[lang]}</p>
           <div className={styles.skillsGrid}>
-            {skills.map(s => (
+            {skills[lang].map(s => (
               <div key={s} className={styles.chip}>{s}</div>
             ))}
           </div>
