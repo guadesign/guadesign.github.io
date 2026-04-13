@@ -1,11 +1,17 @@
+import { labels } from '../data/content'
 import styles from './Contacto.module.css'
 
-export default function Contacto() {
+export default function Contacto({ lang }) {
   return (
     <>
       <section id="contacto" className={styles.contacto}>
-        <h2 className={styles.h2}>¿Trabajamos<br /><em>juntos?</em></h2>
-        <p className={styles.sub}>Estoy disponible para proyectos freelance, part time y full time.</p>
+        <h2 className={styles.h2}>
+          {lang === 'es'
+            ? <>¿Trabajamos<br /><em>juntos?</em></>
+            : <>Let's work<br /><em>together.</em></>
+          }
+        </h2>
+        <p className={styles.sub}>{labels.contactoSub[lang]}</p>
         <div className={styles.links}>
           <a href="mailto:mguadalupeeguiazabal@gmail.com" className="btn btn-white">
             mguadalupeeguiazabal@gmail.com
@@ -19,7 +25,7 @@ export default function Contacto() {
         </div>
       </section>
       <footer className={styles.footer}>
-        © 2026 Guada Eguiazabal — Diseñadora Multimedial, Tucumán, Argentina
+        {labels.footer[lang]}
       </footer>
     </>
   )
