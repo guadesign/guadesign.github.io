@@ -51,7 +51,32 @@ img { display: block; max-width: 100%; }
   opacity: 0.5;
   margin-bottom: 1rem;
 }
+.lang-toggle-btn {
+  position: fixed;
+  top: 1.2rem;
+  right: 2rem;
+  z-index: 1000;
+  background: transparent;
+  border: 1px solid currentColor;
+  color: inherit;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
 
+.active-lang {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.lang-divider {
+  opacity: 0.4;
+}
 .btn {
   display: inline-block;
   padding: 0.9rem 2rem;
