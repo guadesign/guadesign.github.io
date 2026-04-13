@@ -1,3 +1,4 @@
+import React from 'react'
 import { labels } from '../data/content'
 import styles from './Hero.module.css'
 
@@ -18,11 +19,7 @@ export default function Hero({ lang }) {
           Guada<br />
           <span>Eguiazabal</span>
         </h1>
-        <p className={styles.frase}>
-          {labels.heroFrase[lang].split('\n').map((line, i) => (
-            <React.Fragment key={i}>{line}{i === 0 && <br />}</React.Fragment>
-          ))}
-        </p>
+        <p className={styles.frase}>{labels.heroFrase[lang]}</p>
         <div className={styles.btns}>
           <a href="#proyectos" className="btn btn-primary">{labels.heroCta1[lang]}</a>
           <a href="#contacto" className="btn btn-secondary">{labels.heroCta2[lang]}</a>
