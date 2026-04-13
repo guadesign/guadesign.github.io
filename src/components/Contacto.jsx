@@ -7,8 +7,8 @@ export default function Contacto({ lang }) {
       <section id="contacto" className={styles.contacto}>
         <h2 className={styles.h2}>
           {lang === 'es'
-            ? <>{"\u00BFTrabajamos"}<br /><em>juntos?</em></>
-            : <>{"Let's work"}<br /><em>together.</em></>
+            ? <span>Trabajamos<br /><em>juntos?</em></span>
+            : <span>{"Let's work"}<br /><em>together.</em></span>
           }
         </h2>
         <p className={styles.sub}>{labels.contactoSub[lang]}</p>
