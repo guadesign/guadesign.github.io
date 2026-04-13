@@ -4,10 +4,12 @@ import styles from './Nav.module.css'
 export default function Nav() {
   return (
     <nav className={styles.nav}>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#experiencia">Trayectoria</a>
-      <a href="#sobre">Sobre mí</a>
-      <a href="#contacto">Contacto</a>
+      <ul className={styles.links}>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#experiencia">Trayectoria</a></li>
+        <li><a href="#sobre">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
     </nav>
   )
 }
