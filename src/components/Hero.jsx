@@ -1,6 +1,7 @@
+import { labels } from '../data/content'
 import styles from './Hero.module.css'
 
-export default function Hero() {
+export default function Hero({ lang }) {
   return (
     <section id="hero" className={styles.hero}>
       <div className={styles.shapes}>
@@ -12,17 +13,19 @@ export default function Hero() {
       </div>
 
       <div className={styles.left}>
-        <div className={styles.tag}>✦ Disponible para proyectos freelance, part time &amp; full time</div>
+        <div className={styles.tag}>{labels.heroTag[lang]}</div>
         <h1 className={styles.h1}>
           Guada<br />
           <span>Eguiazabal</span>
         </h1>
         <p className={styles.frase}>
-          Diseño que se ve bien<br />y funciona mejor.
+          {labels.heroFrase[lang].split('\n').map((line, i) => (
+            <React.Fragment key={i}>{line}{i === 0 && <br />}</React.Fragment>
+          ))}
         </p>
         <div className={styles.btns}>
-          <a href="#proyectos" className="btn btn-primary">Ver proyectos</a>
-          <a href="#contacto" className="btn btn-secondary">Hablemos</a>
+          <a href="#proyectos" className="btn btn-primary">{labels.heroCta1[lang]}</a>
+          <a href="#contacto" className="btn btn-secondary">{labels.heroCta2[lang]}</a>
         </div>
       </div>
 
