@@ -70,40 +70,32 @@ export const proyectos = [
 ]
 
 export const labels = {
-  // Nav
-  navProyectos:    { es: 'Proyectos',   en: 'Projects' },
-  navTrayectoria:  { es: 'Trayectoria', en: 'Experience' },
-  navSobre:        { es: 'Sobre mí',    en: 'About' },
-  navContacto:     { es: 'Contacto',    en: 'Contact' },
+  navProyectos:   { es: 'Proyectos',   en: 'Projects' },
+  navTrayectoria: { es: 'Trayectoria', en: 'Experience' },
+  navSobre:       { es: 'Sobre mí',    en: 'About' },
+  navContacto:    { es: 'Contacto',    en: 'Contact' },
 
-  // Hero
-  heroTag:    { es: '✦ Disponible para proyectos freelance, part time & full time', en: '✦ Available for freelance, part time & full time projects' },
-  heroFrase:  { es: 'Diseño que se ve bien\ny funciona mejor.', en: 'Design that looks good\nand works even better.' },
-  heroCta1:   { es: 'Ver proyectos', en: 'View projects' },
-  heroCta2:   { es: 'Let\'s talk',   en: 'Let\'s talk' },
+  heroTag:   { es: '✦ Disponible para proyectos freelance, part time & full time', en: '✦ Available for freelance, part time & full time projects' },
+  heroFrase: { es: 'Diseño que se ve bien\ny funciona mejor.', en: 'Design that looks good\nand works even better.' },
+  heroCta1:  { es: 'Ver proyectos', en: 'View projects' },
+  heroCta2:  { es: 'Hablemos',      en: "Let's talk" },
 
-  // Sobre
-  sobreLabel:   { es: '01 — Sobre mí', en: '01 — About me' },
-  sobreTitulo:  { es: 'Diseñadora multimedial\ncon criterio estético.', en: 'Multimedia designer\nwith aesthetic vision.' },
-  sobreBio:     {
+  sobreLabel:  { es: '01 — Sobre mí', en: '01 — About me' },
+  sobreBio:    {
     es: 'Soy Guada, licenciada en Diseño Multimedial (UNSTA, Tucumán). Con más de 3 años de experiencia en identidad visual, motion design y contenido para redes sociales, trabajé en contextos de agencia, empresa y freelance gestionando múltiples marcas en simultáneo. Domino la suite Adobe y tengo criterio estético, atención al detalle y capacidad para adaptarme a distintos lenguajes de marca.',
-    en: 'I\'m Guada, a Multimedia Design graduate (UNSTA, Tucumán). With over 3 years of experience in visual identity, motion design and social media content, I\'ve worked across agency, corporate and freelance settings managing multiple brands simultaneously. I work with the full Adobe suite and bring aesthetic sensibility, attention to detail and the ability to adapt to different brand languages.',
+    en: "I'm Guada, a Multimedia Design graduate (UNSTA, Tucumán). With over 3 years of experience in visual identity, motion design and social media content, I've worked across agency, corporate and freelance settings managing multiple brands simultaneously. I work with the full Adobe suite and bring aesthetic sensibility, attention to detail and the ability to adapt to different brand languages.",
   },
 
-  // Proyectos
-  labelProyectos:  { es: '02 — Proyectos',       en: '02 — Projects' },
-  tituloProyectos: { es: 'Trabajo seleccionado',  en: 'Selected work' },
-  verBehance:      { es: 'Ver en Behance',        en: 'View on Behance' },
+  labelProyectos:  { es: '02 — Proyectos',      en: '02 — Projects' },
+  tituloProyectos: { es: 'Trabajo seleccionado', en: 'Selected work' },
+  verBehance:      { es: 'Ver en Behance',       en: 'View on Behance' },
 
-  // Experiencia
-  expLabel:  { es: '03 — Trayectoria',         en: '03 — Experience' },
-  expTitulo: { es: 'Experiencia profesional',   en: 'Professional experience' },
-  expVerPost: { es: 'Ver post',                 en: 'View post' },
+  expLabel:   { es: '03 — Trayectoria',       en: '03 — Experience' },
+  expTitulo:  { es: 'Experiencia profesional', en: 'Professional experience' },
+  expVerPost: { es: 'Ver post',                en: 'View post' },
 
-  // Contacto
-  contactoTitulo: { es: '¿Trabajamos\njuntos?',          en: 'Let\'s work\ntogether.' },
-  contactoSub:    { es: 'Estoy disponible para proyectos freelance, part time y full time.', en: 'Available for freelance, part time and full time projects.' },
-  footer:         { es: '© 2026 Guada Eguiazabal — Diseñadora Multimedial, Tucumán, Argentina', en: '© 2026 Guada Eguiazabal — Multimedia Designer, Tucumán, Argentina' },
+  contactoSub: { es: 'Estoy disponible para proyectos freelance, part time y full time.', en: 'Available for freelance, part time and full time projects.' },
+  footer:      { es: '© 2026 Guada Eguiazabal — Diseñadora Multimedial, Tucumán, Argentina', en: '© 2026 Guada Eguiazabal — Multimedia Designer, Tucumán, Argentina' },
 }
 
 export const experiencia = [
