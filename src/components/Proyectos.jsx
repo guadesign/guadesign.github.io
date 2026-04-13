@@ -13,7 +13,7 @@ export default function Proyectos({ lang }) {
             <div className={styles.imageBox}>
               <img src={p.img} alt={p.titulo} className={styles.img} />
               <div className={styles.overlay}>
-                <span>{labels.verBehance[lang]}</span>
+                <div className={styles.overlayBtn}>{labels.verBehance[lang]}</div>
               </div>
             </div>
             <div className={styles.info}>
