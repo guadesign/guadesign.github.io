@@ -1,14 +1,15 @@
 import React from 'react'
+import { labels } from '../data/content'
 import styles from './Nav.module.css'
 
-export default function Nav() {
+export default function Nav({ lang }) {
   return (
     <nav className={styles.nav}>
       <ul className={styles.links}>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#experiencia">Trayectoria</a></li>
-        <li><a href="#sobre">Sobre mí</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#proyectos">{labels.navProyectos[lang]}</a></li>
+        <li><a href="#experiencia">{labels.navTrayectoria[lang]}</a></li>
+        <li><a href="#sobre">{labels.navSobre[lang]}</a></li>
+        <li><a href="#contacto">{labels.navContacto[lang]}</a></li>
       </ul>
     </nav>
   )
