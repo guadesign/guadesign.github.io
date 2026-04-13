@@ -65,4 +65,85 @@ export const proyectos = [
       en: 'Full brand development for a beauty studio.',
     },
     img: beautyou,
-    url: 'htt
+    url: 'https://www.behance.net/itsmeguadi',
+  },
+]
+
+export const labels = {
+  navProyectos:   { es: 'Proyectos',   en: 'Projects' },
+  navTrayectoria: { es: 'Trayectoria', en: 'Experience' },
+  navSobre:       { es: 'Sobre mi',    en: 'About' },
+  navContacto:    { es: 'Contacto',    en: 'Contact' },
+
+  heroTag:   { es: 'Disponible para proyectos freelance, part time & full time', en: 'Available for freelance, part time & full time projects' },
+  heroFrase: { es: 'Diseno que se ve bien y funciona mejor.', en: 'Design that looks good and works even better.' },
+  heroCta1:  { es: 'Ver proyectos', en: 'View projects' },
+  heroCta2:  { es: 'Hablemos', en: 'Get in touch' },
+
+  sobreLabel: { es: '01 — Sobre mi', en: '01 — About me' },
+  sobreBio: {
+    es: 'Soy Guada, licenciada en Diseno Multimedial (UNSTA, Tucuman). Con mas de 3 anos de experiencia en identidad visual, motion design y contenido para redes sociales, trabaje en contextos de agencia, empresa y freelance gestionando multiples marcas en simultaneo. Domino la suite Adobe y tengo criterio estetico, atencion al detalle y capacidad para adaptarme a distintos lenguajes de marca.',
+    en: 'I am Guada, a Multimedia Design graduate (UNSTA, Tucuman). With over 3 years of experience in visual identity, motion design and social media content, I have worked across agency, corporate and freelance settings managing multiple brands simultaneously. I work with the full Adobe suite and bring aesthetic sensibility, attention to detail and the ability to adapt to different brand languages.',
+  },
+
+  labelProyectos:  { es: '02 — Proyectos',      en: '02 — Projects' },
+  tituloProyectos: { es: 'Trabajo seleccionado', en: 'Selected work' },
+  verBehance:      { es: 'Ver en Behance',       en: 'View on Behance' },
+
+  expLabel:   { es: '03 — Trayectoria',       en: '03 — Experience' },
+  expTitulo:  { es: 'Experiencia profesional', en: 'Professional experience' },
+  expVerPost: { es: 'Ver post', en: 'View post' },
+
+  contactoSub: { es: 'Estoy disponible para proyectos freelance, part time y full time.', en: 'Available for freelance, part time and full time projects.' },
+  footer: { es: '2026 Guada Eguiazabal — Disenadora Multimedial, Tucuman, Argentina', en: '2026 Guada Eguiazabal — Multimedia Designer, Tucuman, Argentina' },
+}
+
+export const experiencia = [
+  {
+    id: 1,
+    periodo: { es: '2024 — Presente', en: '2024 — Present' },
+    nombre: 'Grupo Prowork',
+    rol: { es: 'Disenadora grafica', en: 'Graphic Designer' },
+    desc: {
+      es: 'Diseno de contenido para redes sociales y materiales impresos para empresa de merchandising. Gestion de multiples lineas de producto en simultaneo.',
+      en: 'Social media content design and printed materials for a promotional merchandising company. Managing multiple product lines simultaneously.',
+    },
+    posts: [
+      { img: pw1, url: 'https://www.instagram.com/grupoprowork/' },
+      { img: pw2, url: 'https://www.instagram.com/grupoprowork/' },
+      { img: pw3, url: 'https://www.instagram.com/grupoprowork/' },
+      { img: pw4, url: 'https://www.instagram.com/grupoprowork/' },
+    ],
+  },
+  {
+    id: 2,
+    periodo: { es: '2022 — 2024', en: '2022 — 2024' },
+    nombre: 'Grupo Flash',
+    rol: { es: 'Disenadora grafica', en: 'Graphic Designer' },
+    desc: {
+      es: 'Gestion visual de multiples marcas del grupo logistico. Identidad, redes sociales y diseno de comunicacion interna y externa.',
+      en: 'Visual management of multiple brands within a logistics group. Identity, social media and internal/external communications design.',
+    },
+    posts: [
+      { img: flash1, url: 'https://www.instagram.com/grupoflash/' },
+      { img: flash2, url: 'https://www.instagram.com/grupoflash/' },
+      { img: flash3, url: 'https://www.instagram.com/grupoflash/' },
+      { img: flash4, url: 'https://www.instagram.com/grupoflash/' },
+      { img: flash5, url: 'https://www.instagram.com/grupoflash/' },
+    ],
+  },
+  {
+    id: 3,
+    periodo: { es: '2022 — 2023', en: '2022 — 2023' },
+    nombre: 'Servicios CEO — UNSTA',
+    rol: { es: 'Disenadora', en: 'Designer' },
+    desc: {
+      es: 'Diseno de piezas institucionales y comunicacion para la universidad.',
+      en: 'Institutional design pieces and communications for the university.',
+    },
+    posts: [
+      { img: unsta1, url: 'https://www.instagram.com/' },
+      { img: unsta2, url: 'https://www.instagram.com/' },
+    ],
+  },
+]
