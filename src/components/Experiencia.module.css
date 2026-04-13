@@ -1,83 +1,119 @@
+.experiencia {
+  padding: 6rem 3rem;
+  background: var(--dark);
+  color: var(--white);
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 3rem;
+}
+
+.block {
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
+.nombre {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.periodo {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.45;
+}
+
+.rol {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--yellow);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #ccc;
+  max-width: 680px;
+  margin-bottom: 2.5rem;
+}
+
 .instagramGrid {
   display: grid;
-  /* Grilla responsiva: se adapta sola al ancho de pantalla */
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
 }
 
 .postWrapper {
   position: relative;
-  width: 100%;
-  /* FORZAR CUADRADO: Esto mantiene la proporción 1:1 siempre */
-  aspect-ratio: 1 / 1; 
-  border-radius: 12px;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
   overflow: hidden;
-  background: #f0f0f0;
+  background: #2a2a2a;
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.postWrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .postImg {
   width: 100%;
   height: 100%;
-  /* Cubre el contenedor cuadrado sin deformar la imagen */
-  object-fit: cover; 
+  object-fit: cover;
   display: block;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  inset: 0;
+  background: rgba(0,0,0,0.35);
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s;
 }
+.postWrapper:hover .overlay { opacity: 1; }
 
-.postWrapper:hover .overlay {
-  opacity: 1;
-}
-
-.postWrapper:hover {
-  transform: scale(1.02);
-}
-
-/* BOTÓN ESTILO INSTAGRAM */
 .instaBtn {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   color: white;
-  padding: 10px 20px;
+  padding: 7px 14px;
   border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px;
 }
 
-/* RESPONSIVE PARA MÓVILES */
 @media (max-width: 768px) {
-  .instagramGrid {
-    /* En celulares mostramos 2 columnas para que no queden tan chiquitos */
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  
-  .instaBtn {
-    padding: 8px 15px;
-    font-size: 0.75rem;
-  }
-  
-  /* En móviles, podemos dejar el botón siempre visible o que aparezca al tocar */
-  .overlay {
-    background: rgba(0, 0, 0, 0.1);
-    opacity: 1;
-  }
+  .experiencia { padding: 4rem 1.5rem; }
+  .block { margin-bottom: 3rem; padding-bottom: 3rem; }
+  .instagramGrid { grid-template-columns: repeat(2, 1fr); }
+  .nombre { font-size: 1.3rem; }
+  .overlay { background: rgba(0,0,0,0.15); opacity: 1; }
 }
