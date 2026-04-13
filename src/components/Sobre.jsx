@@ -20,7 +20,7 @@ export default function Sobre({ lang }) {
         <div className={`${styles.tituloCol} fade-in`}>
           <h2 className={styles.h2}>
             {lang === 'es'
-              ? <><em>Diseñadora</em><br />multimedial con<br />criterio estético.</>
+              ? <><em>Disenadora</em><br />multimedial con<br />criterio estetico.</>
               : <>Multimedia<br /><em>designer</em> with<br />aesthetic vision.</>
             }
           </h2>
