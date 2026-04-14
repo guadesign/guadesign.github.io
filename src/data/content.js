@@ -105,8 +105,8 @@ export const experiencia = [
     nombre: 'Grupo Prowork',
     rol: { es: 'Diseñadora gráfica', en: 'Graphic Designer' },
     desc: {
-      es: 'Diseño de contenido para redes sociales y materiales impresos para empresa de merchandising. Gestión de múltiples líneas de producto en simultáneo.',
-      en: 'Social media content design and printed materials for a promotional merchandising company. Managing multiple product lines simultaneously.',
+      es: 'Diseño de contenido para redes sociales y materiales impresos para empresa de merchandising nacional. Gestión de múltiples líneas de producto en simultáneo.',
+      en: 'Social media content design and printed materials for a promotional merchandising company (Argentina). Managing multiple product lines simultaneously.',
     },
     posts: [
       { img: pw1, url: 'https://www.instagram.com/grupoprowork/' },
