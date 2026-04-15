@@ -3,55 +3,55 @@ import styles from './CV.module.css'
 
 const cvData = {
   es: {
-    subtitulo: 'Disenadora Multimedial',
+    subtitulo: 'Diseñadora Multimedial',
     contactoTitulo: 'contacto',
     items: [
       { icon: 'be', texto: 'behance.com/itsmeguadi', url: 'https://behance.net/itsmeguadi' },
       { icon: '@', texto: 'mguadalupeeguiazabal@gmail.com', url: 'mailto:mguadalupeeguiazabal@gmail.com' },
       { icon: 'tel', texto: '+54 9 3814457642', url: 'tel:+5493814457642' },
       { icon: 'web', texto: 'guadesign.github.io', url: 'https://guadesign.github.io' },
-      { icon: 'loc', texto: 'San Miguel de Tucuman, Argentina', url: null },
+      { icon: 'loc', texto: 'San Miguel de Tucumán, Argentina', url: null },
     ],
     sobreTitulo: 'sobre mi',
-    sobreTexto: 'Soy disenadora multimedial con mas de 3 anos de experiencia en identidad visual, motion design y contenido para redes sociales. Trabaje en contextos de agencia, empresa y freelance, gestionando multiples marcas en simultaneo y colaborando con equipos de marketing. Domino la suite Adobe completa y tengo criterio estetico, atencion al detalle y capacidad de adaptarme a distintos lenguajes de marca.',
-    formacionTitulo: 'formacion',
+    sobreTexto: 'Soy diseñadora multimedial con mas de 3 años de experiencia en identidad visual, motion design y contenido para redes sociales. Trabajé en contextos de empresa y freelance, gestionando múltiples marcas en simultáneo y colaborando con equipos de marketing. Domino la suite Adobe completa y tengo criterio estético, atención al detalle y capacidad de adaptarme a distintos lenguajes de marca.',
+    formacionTitulo: 'formación',
     formacion: [
-      { titulo: 'Licenciatura en Diseno Multimedial', lugar: 'Universidad del Norte Santo Tomas de Aquino (UNSTA)' },
+      { titulo: 'Licenciatura en Diseño Multimedial', lugar: 'Universidad del Norte Santo Tomás de Aquino (UNSTA)' },
     ],
     habilidadesTitulo: 'habilidades',
     habilidades: ['Illustrator', 'InDesign', 'Photoshop', 'Figma', 'After Effects', 'Canva', 'Premiere Pro', 'CapCut'],
     idiomaTitulo: 'idioma',
-    idiomas: [{ lang: 'Ingles', nivel: 'C1' }, { lang: 'Espanol', nivel: 'nativo' }],
+    idiomas: [{ lang: 'Ingles', nivel: 'C1' }, { lang: 'Español', nivel: 'nativo' }],
     expTitulo: 'experiencia',
     experiencia: [
       {
-        rol: 'Disenadora Grafica',
+        rol: 'Diseñadora Gráfica',
         empresa: 'Grupo Prowork',
         periodo: 'Sept 2025 — Presente',
         items: [
-          'Diseno de contenido visual para redes sociales de una empresa de merchandising promocional, con produccion regular de piezas para campanas estacionales.',
-          'Creacion de motion graphics y catalogos de producto en coordinacion directa con el equipo de marketing.',
-          'Adaptacion de formatos visuales para distintas plataformas (feed, stories, catalogos impreso, folleteria).',
+          'Diseño de contenido visual para redes sociales de una empresa de merchandising promocional, con produccion regular de piezas para campañas estacionales.',
+          'Creación de motion graphics y catálogos de producto en coordinación directa con el equipo de marketing.',
+          'Adaptación de formatos visuales para distintas plataformas (feed, stories, catálogos impreso, folleteria).',
         ],
       },
       {
-        rol: 'Disenadora Grafica',
+        rol: 'Diseñadora Gráfica',
         empresa: 'Grupo Flash',
         periodo: 'Sept 2024 — Jul 2025',
         items: [
-          'Responsable del diseno visual para tres marcas del grupo logistico: Mis Envios, Logisticas Especiales y Grupo Flash.',
-          'Desarrolle la identidad corporativa del grupo desde cero, incluyendo el diseno del logo, papeleria institucional y senaletica.',
-          'Produje contenido para redes sociales en colaboracion con el equipo de CM y marketing, manteniendo coherencia visual entre las tres marcas.',
+          'Responsable del diseño visual para tres marcas del grupo logístico: Mis Envios, Logisticas Especiales y Grupo Flash.',
+          'Desarrollé la identidad corporativa del grupo desde cero, incluyendo el diseño del logo, papelería institucional y senalética.',
+          'Produje contenido para redes sociales en colaboración con el equipo de CM y marketing, manteniendo coherencia visual entre las tres marcas.',
         ],
       },
       {
-        rol: 'Disenadora Grafica',
+        rol: 'Diseñadora Gráfica',
         empresa: 'Servicios CEO, UNSTA',
         periodo: 'Jun 2022 — Oct 2023',
         items: [
-          'Produccion de contenido multimedia para comunicacion institucional universitaria: campanas de admision, spots, GIFs y videos.',
-          'Diseno grafico para comunicacion interna y externa de la institucion, con entrega en multiples formatos y plataformas.',
-          'Experiencia de trabajo en entorno institucional con plazos ajustados y alta produccion de piezas.',
+          'Producción de contenido multimedia para comunicacion institucional universitaria: campañas de admisión, spots, GIFs y videos.',
+          'Diseño gráfico para comunicación interna y externa de la institución, con entrega en múltiples formatos y plataformas.',
+          'Experiencia de trabajo en entorno institucional con plazos ajustados y alta producción de piezas.',
         ],
       },
     ],
@@ -119,7 +119,6 @@ export default function CV({ lang }) {
     <div className={styles.cvPage}>
       <div className={styles.cvWrap}>
 
-        {/* HEADER */}
         <div className={styles.header}>
           <div className={styles.headerLeft}>
             <h1 className={styles.nombre}>Guada<br />Eguiazabal</h1>
@@ -128,10 +127,8 @@ export default function CV({ lang }) {
           <div className={styles.star}>★</div>
         </div>
 
-        {/* BODY */}
         <div className={styles.body}>
 
-          {/* COLUMNA IZQUIERDA */}
           <div className={styles.colLeft}>
 
             <div className={styles.bloque}>
@@ -183,7 +180,6 @@ export default function CV({ lang }) {
 
           </div>
 
-          {/* COLUMNA DERECHA */}
           <div className={styles.colRight}>
             <h2 className={styles.secTitulo}>{d.expTitulo}</h2>
             {d.experiencia.map((exp, i) => (
