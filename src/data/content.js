@@ -2,6 +2,7 @@ import beautyou from '../assets/beautyou.png'
 import emerge from '../assets/emerge.png'
 import moon from '../assets/moon.png'
 import warner from '../assets/warner.png'
+import zodiane from '../assets/zodiane.png'
 
 import flash1 from '../assets/flash-1.jpg'
 import flash2 from '../assets/flash-2.jpg'
@@ -66,6 +67,17 @@ export const proyectos = [
     },
     img: beautyou,
     url: 'https://www.behance.net/gallery/138887507/Beautyou-briefbycroca',
+  },
+  {
+    id: 5,
+    titulo: 'Zodiane Perfumes — Branding',
+    tag: { es: 'Identidad Visual', en: 'Visual Identity' },
+    desc: {
+      es: 'Identidad de marca para perfumeria nicho. Desarrollo de nombre, logo y sistema visual.',
+      en: 'Brand identity for a niche perfumery. Name, logo and full visual system development.',
+    },
+    img: zodiane,
+    url: 'https://bradingzodianeguadi.myportfolio.com',
   },
 ]
 
