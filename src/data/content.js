@@ -109,10 +109,10 @@ export const experiencia = [
       en: 'Social media content design and printed materials for a promotional merchandising company (Argentina). Managing multiple product lines simultaneously.',
     },
     posts: [
-      { img: pw1, url: 'https://www.instagram.com/grupoprowork/' },
-      { img: pw2, url: 'https://www.instagram.com/grupoprowork/' },
-      { img: pw3, url: 'https://www.instagram.com/grupoprowork/' },
-      { img: pw4, url: 'https://www.instagram.com/grupoprowork/' },
+      { img: pw1, url: 'https://www.instagram.com/prowork.merchandising/p/DRmd0p4CNnH/' },
+      { img: pw2, url: 'https://www.instagram.com/p/DTsQUCnAXC8/' },
+      { img: pw3, url: 'https://www.instagram.com/p/DV_Bm9ej54s/' },
+      { img: pw4, url: 'https://www.instagram.com/p/DR7ERT6iCei/' },
     ],
   },
   {
@@ -125,11 +125,11 @@ export const experiencia = [
       en: 'Visual management of multiple brands within a logistics group. Identity, social media and internal/external communications design.',
     },
     posts: [
-      { img: flash1, url: 'https://www.instagram.com/grupoflash/' },
-      { img: flash2, url: 'https://www.instagram.com/grupoflash/' },
-      { img: flash3, url: 'https://www.instagram.com/grupoflash/' },
-      { img: flash4, url: 'https://www.instagram.com/grupoflash/' },
-      { img: flash5, url: 'https://www.instagram.com/grupoflash/' },
+      { img: flash1, url: 'https://www.instagram.com/p/DIy7yJiuhGk/' },
+      { img: flash2, url: 'https://www.instagram.com/misenvios/p/DLm20PttFLU/' },
+      { img: flash3, url: 'https://www.instagram.com/p/DFu2dTDRFkE/' },
+      { img: flash4, url: 'https://www.instagram.com/misenvios/p/DKudWIxMcw-/' },
+      { img: flash5, url: 'https://www.instagram.com/p/DLFm_P3ur2y/' },
     ],
   },
   {
@@ -142,8 +142,8 @@ export const experiencia = [
       en: 'Institutional design pieces and communications for the university.',
     },
     posts: [
-      { img: unsta1, url: 'https://www.instagram.com/' },
-      { img: unsta2, url: 'https://www.instagram.com/' },
+      { img: unsta1, url: 'https://www.instagram.com/p/CgCsOeElajD/' },
+      { img: unsta2, url: 'https://www.instagram.com/p/Cd5z-HXl-pq' },
     ],
   },
 ]
