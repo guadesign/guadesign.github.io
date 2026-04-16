@@ -32,7 +32,7 @@ export const proyectos = [
       en: 'Animated graphics pack for broadcasting and social media.',
     },
     img: warner,
-    url: 'https://www.behance.net/itsmeguadi',
+    url: 'https://www.behance.net/gallery/157765497/Warner-Music-Group-BROADCAST-PACK',
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ export const proyectos = [
       en: 'Typographic exploration using a Swiss grid system.',
     },
     img: emerge,
-    url: 'https://www.behance.net/itsmeguadi',
+    url: 'https://www.behance.net/gallery/204110719/01-EMERGE-SWISS-DESIGN-FUNDAMENTALS',
   },
   {
     id: 3,
@@ -54,7 +54,7 @@ export const proyectos = [
       en: 'Fictional user interface for a space mission.',
     },
     img: moon,
-    url: 'https://www.behance.net/itsmeguadi',
+    url: 'https://www.behance.net/gallery/186560773/Mission-to-the-Moon-FUI-Design',
   },
   {
     id: 4,
@@ -65,7 +65,7 @@ export const proyectos = [
       en: 'Full brand development for a beauty studio.',
     },
     img: beautyou,
-    url: 'https://www.behance.net/itsmeguadi',
+    url: 'https://www.behance.net/gallery/138887507/Beautyou-briefbycroca',
   },
 ]
 
