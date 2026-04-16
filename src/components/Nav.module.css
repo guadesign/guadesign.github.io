@@ -66,11 +66,14 @@
   color: var(--dark);
   transition: border-color 0.2s;
 }
+
+/* ... 
 .langBtn:hover { border-color: var(--dark); }
 
 .langDivider { opacity: 0.25; }
 
 .activeLang { color: var(--orange); }
+*/
 
 .cvBtn {
   background: var(--dark);
