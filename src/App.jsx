@@ -16,15 +16,7 @@ function App() {
   return (
     <div className="app-container">
       <Cursor />
-      <button
-        className="lang-toggle-btn"
-        onClick={() => setLang(lang === 'es' ? 'en' : 'es')}
-      >
-        <span className={lang === 'es' ? 'active-lang' : ''}>ES</span>
-        <span className="lang-divider">|</span>
-        <span className={lang === 'en' ? 'active-lang' : ''}>EN</span>
-      </button>
-      <Nav lang={lang} vista={vista} setVista={setVista} />
+      <Nav lang={lang} setLang={setLang} vista={vista} setVista={setVista} />
       {vista === 'portfolio' ? (
         <main>
           <Hero lang={lang} />
