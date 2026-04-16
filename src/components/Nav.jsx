@@ -2,7 +2,7 @@ import React from 'react'
 import { labels } from '../data/content'
 import styles from './Nav.module.css'
 
-export default function Nav({ lang, vista, setVista }) {
+export default function Nav({ lang, setLang, vista, setVista }) {
   return (
     <nav className={styles.nav}>
       <ul className={styles.links}>
@@ -21,12 +21,24 @@ export default function Nav({ lang, vista, setVista }) {
           </li>
         )}
       </ul>
-      <button
-        className={`${styles.cvBtn} ${vista === 'cv' ? styles.cvBtnActive : ''}`}
-        onClick={() => setVista(vista === 'cv' ? 'portfolio' : 'cv')}
-      >
-        CV / Resumé
-      </button>
+
+      <div className={styles.rightBtns}>
+        <button
+          className={styles.langBtn}
+          onClick={() => setLang(lang === 'es' ? 'en' : 'es')}
+        >
+          <span className={lang === 'es' ? styles.activeLang : ''}>ES</span>
+          <span className={styles.langDivider}>|</span>
+          <span className={lang === 'en' ? styles.activeLang : ''}>EN</span>
+        </button>
+
+        <button
+          className={`${styles.cvBtn} ${vista === 'cv' ? styles.cvBtnActive : ''}`}
+          onClick={() => setVista(vista === 'cv' ? 'portfolio' : 'cv')}
+        >
+          CV / Resumé
+        </button>
+      </div>
     </nav>
   )
 }
