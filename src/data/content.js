@@ -113,12 +113,12 @@ export const labels = {
 export const experiencia = [
   {
     id: 1,
-    periodo: { es: '2024 — Presente', en: '2024 — Present' },
+    periodo: { es: 'Sept 2025 — Presente', en: 'Sept 2025 — Present' },
     nombre: 'Grupo Prowork',
     rol: { es: 'Diseñadora gráfica', en: 'Graphic Designer' },
     desc: {
-      es: 'Diseño de contenido para redes sociales y materiales impresos para empresa de merchandising nacional. Gestión de múltiples líneas de producto en simultáneo.',
-      en: 'Social media content design and printed materials for a promotional merchandising company (Argentina). Managing multiple product lines simultaneously.',
+      es: 'Responsable de la definición y evolución de la identidad visual de la marca para Argentina y Chile. Diseño y producción de contenido para redes sociales, motion graphics, catálogos y materiales comerciales. Desarrollo de recursos visuales para equipos de marketing y ventas, adaptando campañas a formatos digitales e impresos.',
+      en: 'Responsible for defining and evolving the brand\'s visual identity for Argentina and Chile. Design and production of social media content, motion graphics, catalogs and commercial materials. Development of visual assets for marketing and sales teams, adapting campaigns across digital and print formats.',
     },
     posts: [
       { img: pw1, url: 'https://www.instagram.com/prowork.merchandising/p/DRmd0p4CNnH/' },
@@ -129,12 +129,12 @@ export const experiencia = [
   },
   {
     id: 2,
-    periodo: { es: '2022 — 2024', en: '2022 — 2024' },
+    periodo: { es: 'Sept 2024 — Sept 2025', en: 'Sept 2024 — Sept 2025' },
     nombre: 'Grupo Flash',
     rol: { es: 'Diseñadora gráfica', en: 'Graphic Designer' },
     desc: {
-      es: 'Gestión visual de múltiples marcas del grupo logístico. Identidad, redes sociales y diseño de comunicación interna y externa.',
-      en: 'Visual management of multiple brands within a logistics group. Identity, social media and internal/external communications design.',
+      es: 'Desarrollo de piezas gráficas y contenido digital para las distintas unidades de negocio del grupo en Argentina, Bolivia y la región NOA. Creación de la identidad visual inicial de Grupo Flash, incluyendo logotipo, sistema visual básico y aplicaciones institucionales. Producción de contenido para redes en coordinación con marketing y community manager.',
+      en: 'Development of graphic pieces and digital content for the group\'s different business units across Argentina, Bolivia and the NOA region. Created the initial visual identity for Grupo Flash, including logo, basic visual system and institutional applications. Social media content production in coordination with marketing and community management teams.',
     },
     posts: [
       { img: flash1, url: 'https://www.instagram.com/p/DIy7yJiuhGk/' },
@@ -146,12 +146,12 @@ export const experiencia = [
   },
   {
     id: 3,
-    periodo: { es: '2022 — 2023', en: '2022 — 2023' },
+    periodo: { es: 'Jun 2022 — Oct 2023', en: 'Jun 2022 — Oct 2023' },
     nombre: 'Servicios CEO — UNSTA',
-    rol: { es: 'Diseñadora', en: 'Designer' },
+    rol: { es: 'Diseñadora gráfica y multimedial', en: 'Graphic & Multimedia Designer' },
     desc: {
-      es: 'Diseño de piezas institucionales y comunicación para la universidad.',
-      en: 'Institutional design pieces and communications for the university.',
+      es: 'Diseño y producción de contenido multimedia para campañas institucionales, admisiones y comunicación universitaria. Desarrollo de piezas gráficas, animaciones, videos y recursos adaptados a múltiples plataformas y públicos.',
+      en: 'Design and production of multimedia content for institutional campaigns, admissions and university communications. Development of graphic pieces, animations, videos and assets adapted to multiple platforms and audiences.',
     },
     posts: [
       { img: unsta1, url: 'https://www.instagram.com/p/CgCsOeElajD/' },
